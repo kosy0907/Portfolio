@@ -1,0 +1,42 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    background: none;
+    width: 100%;
+    z-index: 20;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 1rem 4rem;
+    padding: 1rem;
+}
+
+nav ul li {
+    font-size: 1.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    margin-left: 2rem;
+    color: #CBE4DE;
+    transition:0.3s;
+}
+
+nav li span {
+    color: #039FA5;
+}
+
+/* transition */
+nav ul:hover li{
+    opacity:0.8;
+    filter:blur(1px);
+}
+
+nav ul li:hover{
+    opacity:1;
+    filter:blur(0);
+    color: #0E8388;
+    font-weight: 700;
+}

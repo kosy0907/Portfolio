@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
+import './Section4.css';
 
-export default function Section4() {
+function Section4(props, projectRef) {
     return (
-        <div>
-            Section4
+        <div className='project' ref={projectRef}>
+            PROJECT
         </div>
     );
 }
+
+export default forwardRef(Section4);

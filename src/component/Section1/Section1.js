@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Section1.css';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Section1() {
-
+function Section1(props) {
+    // parallax
     const [position, setPosition] = useState(0);
     function onScroll() {
         setPosition(window.scrollY);
@@ -15,7 +17,7 @@ export default function Section1() {
     }, []);
 
     return (
-        <div className='wrap'>
+        <div className='home'>
             <div className='introBg'>
                 <div className='intro bg1' />
                 <div className='intro bg2' style={{ backgroundPositionY: position / 2 }} />
@@ -24,13 +26,36 @@ export default function Section1() {
                 <div className='intro bg5' style={{ backgroundPositionY: position / 6 }} />
                 <div className='intro bg6' style={{ backgroundPositionY: position / 10 }} />
 
-                <div className='intro text'>
-                    <p>웹 개발을 좋아하는</p>
-                    <p>고승연입니다.</p>
-                </div>
-            </div>
+                <div className='intro cover'>
+                    <div className='text'>
+                        <div className='scrollContainer'>
+                            <div className='scrollBox'>
+                                <ul>
+                                    <li style={{ color: "#02C0CC" }}>웹 개발을</li>
+                                    <li style={{ color: "#025FCC" }}>기록을</li>
+                                    <li style={{ color: "#CC9F02" }}>픽셀아트를</li>
+                                </ul>
+                            </div>
+                            <span style={{ color: "#fff" }}>좋아하는</span>
+                        </div >
 
-            <div className='exDiv'>This is test</div>
-        </div>
+                        <div className='fixed-container'>
+                            <ul style={{ listStyle: "none", fontSize: "1.5rem", fontWeight: "700" }}>
+                                <li style={{ marginBottom: "1rem" }}><span style={{ fontSize: "2.5rem", fontWeight: "900" }}>고승연</span>입니다.</li>
+                                <li><span>React.js</span>를 활용하여 프로젝트를 개발합니다.</li>
+                                <li>웹 개발 시 <span>반응형 웹</span>을 고려하여 개발합니다.</li>
+                                <li>공부한 내용을 <span>블로그</span>에 게시하여 스터디를 진행합니다.</li>
+                            </ul>
+                        </div>
+                        <div style={{ marginTop: "3rem" }}>
+                            <FontAwesomeIcon className='bounceArrow' icon={faAngleDown} size="2x" />
+                        </div>
+                    </div >
+                </div >
+
+            </div >
+        </div >
     );
 }
+
+export default Section1;
