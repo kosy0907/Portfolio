@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Cursor.css';
 
 const Cursor = () => {
-    const mainCursorRef = React.useRef(null);
-    const subCursorRef = React.useRef(null);
+    const mainCursorRef = useRef(null);
+    const subCursorRef = useRef(null);
 
-    React.useEffect(() => {
-        document.addEventListener('mousemove', (e) => {
-            const { clientX, clientY } = e;
+    useEffect(() => {
+        const onMouseMove = (e) => {
+            const { clientX, clientY } = e
 
             mainCursorRef.current.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
             subCursorRef.current.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
             subCursorRef.current.style.transition = `all 0.15s`;
-        })
+        }
+        document.addEventListener('mousemove', onMouseMove);
+
+        return () => {
+            document.removeEventListener('mousemove', onMouseMove);
+        }
     }, [])
 
     return (

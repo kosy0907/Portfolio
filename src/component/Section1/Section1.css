@@ -1,6 +1,5 @@
 .home {
   height: 100vh;
-  font-family: 'Rajdhani', sans-serif;
 }
 
 /* layer */
@@ -86,7 +85,7 @@
 
 .fixed-container ul li span {
   font-weight: 700;
-  color: #039FA5;
+  color: #03d2e0;
 }
 
 .bounceArrow {

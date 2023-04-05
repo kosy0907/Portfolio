@@ -17,7 +17,6 @@ nav ul {
 
 nav ul li {
     font-size: 1.5rem;
-    font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
     margin-left: 2rem;
     color: #CBE4DE;
@@ -25,7 +24,7 @@ nav ul li {
 }
 
 nav li span {
-    color: #039FA5;
+    color: #03d2e0;
 }
 
 /* transition */

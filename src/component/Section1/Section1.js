@@ -31,7 +31,7 @@ function Section1(props) {
                         <div className='scrollContainer'>
                             <div className='scrollBox'>
                                 <ul>
-                                    <li style={{ color: "#02C0CC" }}>웹 개발을</li>
+                                    <li style={{ color: "#03d2e0" }}>웹 개발을</li>
                                     <li style={{ color: "#025FCC" }}>기록을</li>
                                     <li style={{ color: "#CC9F02" }}>픽셀아트를</li>
                                 </ul>

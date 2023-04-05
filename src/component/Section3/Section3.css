@@ -1,3 +1,4 @@
-.skill {
-    height: 100vh;
+.skill .container {
+    display: flex;
+    justify-content: center;
 }
