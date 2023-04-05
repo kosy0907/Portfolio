@@ -1,35 +1,30 @@
-import React, { forwardRef, useState, useEffect } from 'react';
+import React, { forwardRef } from 'react';
 import './Navbar.css';
 
-function Navbar(props, NavbarRef) {
-    const [navState, setNavState] = useState('');
-
-    useEffect(() => {
-        console.log(navState);
-    })
+function Navbar(props) {
 
     const HomeClick = () => {
-        setNavState('Home');
+        props.setNavState(1);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     const AboutClick = () => {
-        setNavState('About');
+        props.setNavState(2);
         props.aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
     const SkillClick = () => {
-        setNavState('Skill');
+        props.setNavState(3);
         props.skillRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
     const ProjectClick = () => {
-        setNavState('Project');
+        props.setNavState(4);
         props.projectRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
     return (
-        <nav ref={NavbarRef}>
+        <nav>
             <ul>
                 <li className='navBtn' onClick={HomeClick}>HOME<span>.</span></li>
                 <li className='navBtn' onClick={AboutClick}>ABOUT<span>.</span></li>

@@ -13,10 +13,22 @@ const DIVIDER_HEIGHT = 5;
 
 function App() {
   const [scrollIndex, setScrollIndex] = useState(1);
+  const [navState, setNavState] = useState(1);
   const aboutRef = useRef(null);
   const skillRef = useRef(null);
   const projectRef = useRef(null);
-  const NavbarRef = useRef(null);
+
+  useEffect(() => {
+    if (navState === 1) {
+      setScrollIndex(1);
+    } else if (navState === 2) {
+      setScrollIndex(2);
+    } else if (navState === 3) {
+      setScrollIndex(3);
+    } else if (navState === 4) {
+      setScrollIndex(4);
+    }
+  }, [navState])
 
   useEffect(() => {
     const wheelHandler = (e) => {
@@ -87,7 +99,9 @@ function App() {
   return (
     <div className="App">
       <Cursor />
-      <Navbar aboutRef={aboutRef} skillRef={skillRef} projectRef={projectRef} ref={NavbarRef} />
+      <Navbar aboutRef={aboutRef} skillRef={skillRef} projectRef={projectRef}
+        setNavState={setNavState} />
+      {navState}
       <div className='section'>
         <Dots scrollIndex={scrollIndex} />
         <Section1 />
