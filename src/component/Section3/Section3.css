@@ -1,4 +1,38 @@
-.skill .container {
+.project {
+    background-color: #2E4F4F;
+}
+
+.projectContent {
     display: flex;
-    justify-content: center;
+}
+
+.projectLeft, .projectRight {
+    width: 50%;
+}
+
+.checkerBoard {
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-left: 1px solid #CBE4DE;
+    align-items: stretch;
+}
+
+.checkerBoard div {
+    width: 100%;
+    /* height: 14rem; */
+}
+
+.checkerBoard div:nth-child(2), 
+.checkerBoard div:nth-child(3), 
+.checkerBoard div:nth-child(6),
+.checkerBoard div:nth-child(7) {
+    background-color: gray;
+}
+
+@media (max-width: 750px) {
+    .checkerBoard::-webkit-scrollbar{
+        display:none;
+    }
 }

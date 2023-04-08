@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './Cursor.css';
 
-const Cursor = () => {
+function Cursor() {
     const mainCursorRef = useRef(null);
     const subCursorRef = useRef(null);
 

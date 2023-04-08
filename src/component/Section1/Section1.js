@@ -6,9 +6,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Section1(props) {
     // parallax
     const [position, setPosition] = useState(0);
-    function onScroll() {
+
+    const onScroll = () => {
         setPosition(window.scrollY);
     }
+
+    const toAbout = () => {
+        props.aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+
     useEffect(() => {
         window.addEventListener('scroll', onScroll);
         return () => {
@@ -19,11 +25,11 @@ function Section1(props) {
     return (
         <div className='home'>
             <div className='introBg'>
-                <div className='intro bg1' />
-                <div className='intro bg2' style={{ backgroundPositionY: position / 2 }} />
+                <div className='intro bg1' style={{ backgroundPositionY: position }} />
+                <div className='intro bg2' style={{ backgroundPositionY: position }} />
                 <div className='intro bg3' style={{ backgroundPositionY: position / 2 }} />
-                <div className='intro bg4' style={{ backgroundPositionY: position / 4 }} />
-                <div className='intro bg5' style={{ backgroundPositionY: position / 6 }} />
+                <div className='intro bg4' style={{ backgroundPositionY: position / 2 }} />
+                <div className='intro bg5' style={{ backgroundPositionY: position / 3 }} />
                 <div className='intro bg6' style={{ backgroundPositionY: position / 10 }} />
 
                 <div className='intro cover'>
@@ -39,8 +45,8 @@ function Section1(props) {
                             <span style={{ color: "#fff" }}>좋아하는</span>
                         </div >
 
-                        <div className='fixed-container'>
-                            <ul style={{ listStyle: "none", fontSize: "1.5rem", fontWeight: "700" }}>
+                        <div className='fixedContainer'>
+                            <ul style={{ listStyle: "none", fontSize: "1.25rem", fontWeight: "700" }}>
                                 <li style={{ marginBottom: "1rem" }}><span style={{ fontSize: "2.5rem", fontWeight: "900" }}>고승연</span>입니다.</li>
                                 <li><span>React.js</span>를 활용하여 프로젝트를 개발합니다.</li>
                                 <li>웹 개발 시 <span>반응형 웹</span>을 고려하여 개발합니다.</li>
@@ -50,6 +56,7 @@ function Section1(props) {
                         <div style={{ marginTop: "3rem" }}>
                             <FontAwesomeIcon className='bounceArrow' icon={faAngleDown} size="2x" />
                         </div>
+                        <div className='toAboutBtn' onClick={toAbout}>About Me</div>
                     </div >
                 </div >
 

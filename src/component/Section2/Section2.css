@@ -1,0 +1,33 @@
+.aboutContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.aboutContent div {
+    background-color: rgb(26, 131, 80);
+    height: 15rem;
+    border-radius: 0.5rem;
+}
+
+.aboutContent div:nth-child(1) {
+	grid-column: 1 / 3;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

@@ -13,13 +13,8 @@ function Navbar(props) {
         props.aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
-    const SkillClick = () => {
-        props.setNavState(3);
-        props.skillRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-
     const ProjectClick = () => {
-        props.setNavState(4);
+        props.setNavState(3);
         props.projectRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
@@ -28,7 +23,6 @@ function Navbar(props) {
             <ul>
                 <li className='navBtn' onClick={HomeClick}>HOME<span>.</span></li>
                 <li className='navBtn' onClick={AboutClick}>ABOUT<span>.</span></li>
-                <li className='navBtn' onClick={SkillClick}>SKILL<span>.</span></li>
                 <li className='navBtn' onClick={ProjectClick}>PROJECT<span>.</span></li>
             </ul>
         </nav>
