@@ -3,36 +3,49 @@
 }
 
 .projectContent {
-    display: flex;
+    height: 35rem;
 }
 
-.projectLeft, .projectRight {
-    width: 50%;
+.projectContent .container {
+    padding-top: 1.5rem;
 }
 
-.checkerBoard {
-    width: 100%;
-    height: 600px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.projectContent .container, .projectContent .row {
+    height: 100%;
+}
+
+.projectTitle div:hover {
+    background-color: #CBE4DE;
+    color: #2E4F4F !important;
+    cursor: pointer;
+}
+
+.col-lg-9 {
     border-left: 1px solid #CBE4DE;
-    align-items: stretch;
 }
 
-.checkerBoard div {
-    width: 100%;
-    /* height: 14rem; */
+.cardContainer .card {
+    width: 40%;
+    height: 5rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
 }
 
-.checkerBoard div:nth-child(2), 
-.checkerBoard div:nth-child(3), 
-.checkerBoard div:nth-child(6),
-.checkerBoard div:nth-child(7) {
-    background-color: gray;
-}
-
-@media (max-width: 750px) {
+@media screen and (max-width: 767px) {
+    .project {
+      padding-top: 5rem;
+    }
     .checkerBoard::-webkit-scrollbar{
         display:none;
     }
-}
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  } 
+  
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  
+  @media screen and (min-width: 1200px) {
+  
+  }
