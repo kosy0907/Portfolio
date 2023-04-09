@@ -1,17 +1,38 @@
-nav {
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    background: none;
+.navWrapper {
     width: 100%;
     z-index: 20;
+    position: fixed;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    width: 60%;
+    margin: auto;
+}
+
+nav .menuIcon {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+}
+
+nav p {
+    font-size: 1rem;
+    color: #5cb3b9; 
+    margin: 0;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    margin: 1rem 4rem;
+    margin: 1rem;
     padding: 1rem;
 }
 
@@ -39,3 +60,50 @@ nav ul li:hover{
     color: #0E8388;
     font-weight: 700;
 }
+
+@media screen and (max-width: 767px) {
+    nav {
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+    }
+    nav .menuIcon {
+        display: block;
+        top: 5%;
+    }
+    nav .navMenu {
+        width: 100%;
+        height: 50vh;
+        background-color: rgba(1, 87, 94, 0.9);
+        transition: transform 0.5s ease-in-out;
+        transform: translateY(-120%);
+    }
+    .navMenu.open {
+        transform: translateY(0);
+      }
+    nav p {
+        display: none;
+    }
+    nav ul {
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 0 0 1rem 1rem;
+        margin: 0;
+        padding: 0;
+        height: 60%;
+    }
+    nav ul li {
+        margin: 1rem auto;
+        font-size: 1rem;
+    }
+    nav ul li:hover {
+        color: #fff;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    
+  } 
+  
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    
+  }

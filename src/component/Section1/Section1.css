@@ -68,7 +68,7 @@
 }
 
 .scrollBox ul {
-  margin: 0 0.625rem;
+  margin-right: 0.625rem;
   padding: 0;
   animation: scrollUp 5s infinite;
 }
@@ -82,13 +82,20 @@
  }
 }
 
+.fixedContainer {
+  margin: 2.5rem 0;
+}
+
 .fixedContainer ul {
   padding: 0;
+  list-style: none;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .fixedContainer ul li span {
-  font-weight: 700;
   color: #03d2e0;
+  font-size: 1.5rem;
 }
 
 .bounceArrow {
@@ -103,7 +110,7 @@
 
 .toAboutBtn {
   background: none;
-  border: 1px solid #02C0CC;
+  border: 2px solid #02C0CC;
   border-radius: 10px;
   width: 7rem;
   height: 3rem;
@@ -111,9 +118,46 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .toAboutBtn:hover {
   background: #02C0CC;
+}
+
+@media screen and (max-width: 767px) {
+  .scrollContainer {
+    font-size: 1rem;
+  }
+
+  .scrollBox {
+    height: 1.5rem;
+  }
+
+  .fixedContainer ul li {
+    font-size: 0.8rem;
+  }
+
+  .fixedContainer ul li span {
+    font-size: 1rem;
+  }
+
+  .intro {
+    justify-content: center;
+  }
+
+  .text {
+    position: static;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+} 
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  
 }

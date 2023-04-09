@@ -1,7 +1,10 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 
 function Navbar(props) {
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const HomeClick = () => {
         props.setNavState(1);
@@ -18,14 +21,22 @@ function Navbar(props) {
         props.projectRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    }
+
     return (
-        <nav>
-            <ul>
-                <li className='navBtn' onClick={HomeClick}>HOME<span>.</span></li>
-                <li className='navBtn' onClick={AboutClick}>ABOUT<span>.</span></li>
-                <li className='navBtn' onClick={ProjectClick}>PROJECT<span>.</span></li>
-            </ul>
-        </nav>
+        <div className='navWrapper'>
+            <nav>
+                <FontAwesomeIcon color='#CBE4DE' className={`menuIcon ${menuOpen ? 'open' : ''}`} onClick={toggleMenu} icon={menuOpen ? faTimes : faBars} size="2x" />
+                <p>seungyeonko98@gmail.com</p>
+                <ul className={`navMenu ${menuOpen ? 'open' : ''}`}>
+                    <li className='navBtn' onClick={HomeClick}>HOME<span>.</span></li>
+                    <li className='navBtn' onClick={AboutClick}>ABOUT<span>.</span></li>
+                    <li className='navBtn' onClick={ProjectClick}>PROJECT<span>.</span></li>
+                </ul>
+            </nav>
+        </div>
     );
 }
 

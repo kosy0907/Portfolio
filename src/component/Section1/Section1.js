@@ -42,12 +42,11 @@ function Section1(props) {
                                     <li style={{ color: "#CC9F02" }}>픽셀아트를</li>
                                 </ul>
                             </div>
-                            <span style={{ color: "#fff" }}>좋아하는</span>
+                            <span style={{ color: "#fff" }}>좋아하는 <span style={{ color: '#02C0CC' }}>고승연</span>입니다.</span>
                         </div >
 
                         <div className='fixedContainer'>
-                            <ul style={{ listStyle: "none", fontSize: "1.25rem", fontWeight: "700" }}>
-                                <li style={{ marginBottom: "1rem" }}><span style={{ fontSize: "2.5rem", fontWeight: "900" }}>고승연</span>입니다.</li>
+                            <ul>
                                 <li><span>React.js</span>를 활용하여 프로젝트를 개발합니다.</li>
                                 <li>웹 개발 시 <span>반응형 웹</span>을 고려하여 개발합니다.</li>
                                 <li>공부한 내용을 <span>블로그</span>에 게시하여 스터디를 진행합니다.</li>

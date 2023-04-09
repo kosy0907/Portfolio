@@ -14,23 +14,59 @@ html, body {
   }
 
 .about, .project, .skill {
-    display: flex;
-    justify-content: center;
     height: 100vh;
-    padding-top: 5rem;
+    padding-top: 8rem;
     box-sizing: border-box;
 }
 
-.section .title {
+.title {
     color: #03d2e0;
     font-size: 2rem;
     font-weight: 700;
 }
 
-.section .container {
+.wrap {
     width: 60%;
+    margin: 0 auto;
 }
 
 .title p {
     margin-bottom: 0.5rem;
 }
+
+@media screen and (max-width: 767px) {
+    .wrap {
+      width: 80%;
+      max-width: 540px;
+    }
+
+    .dots {
+      display: none;
+    }
+    
+    .title {
+      font-size: 1.25rem;
+    }
+  }
+  
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .wrap {
+      width: 80%;
+      max-width: 720px;
+    }
+
+    .dots {
+      display: none;
+    }
+
+    .title {
+      font-size: 1.25rem;
+    }
+  } 
+  
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .wrap {
+      width: 80%;
+      max-width: 960px;
+    }
+  }

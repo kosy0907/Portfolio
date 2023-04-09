@@ -4,7 +4,7 @@ import './Section3.css';
 function Section4(props, projectRef) {
     return (
         <div className='project' ref={projectRef}>
-            <div className='container'>
+            <div className='wrap'>
                 <div className='title'>
                     <p>PROJECT</p>
                     <p style={{ color: '#CBE4DE', fontSize: '1.2rem', margin: '0' }}>카드를 클릭해주세요!</p>
