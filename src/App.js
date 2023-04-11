@@ -8,8 +8,6 @@ import Cursor from './component/CustomCursor/Cursor';
 import Footer from './component/Footer/Footer';
 import Dots from './component/Dots/Dots';
 
-const DIVIDER_HEIGHT = 5;
-
 function App() {
   const [scrollIndex, setScrollIndex] = useState(1);
   const [navState, setNavState] = useState(1);
@@ -17,23 +15,12 @@ function App() {
   const projectRef = useRef(null);
 
   useEffect(() => {
-    if (navState === 1) {
-      setScrollIndex(1);
-    } else if (navState === 2) {
-      setScrollIndex(2);
-    } else if (navState === 3) {
-      setScrollIndex(3);
-    }
-  }, [navState])
-
-  useEffect(() => {
     const wheelHandler = (e) => {
-
+      const DIVIDER_HEIGHT = 5;
       const { deltaY } = e;
       const scrollPositionDown = window.scrollY;
       const scrollPositionUp = window.scrollY - 100;
       const pageHeight = window.innerHeight;
-
 
       // Scroll Down
       if (deltaY > 0) {
@@ -80,11 +67,12 @@ function App() {
 
   }, []);
 
+
   return (
     <div className="App">
       <Cursor />
       <Navbar aboutRef={aboutRef} projectRef={projectRef}
-        setNavState={setNavState} />
+        setNavState={setNavState} navState={navState} />
       <div className='section'>
         <Dots scrollIndex={scrollIndex} />
         <Section1 aboutRef={aboutRef} />

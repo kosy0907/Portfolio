@@ -1,6 +1,6 @@
 .navWrapper {
     width: 100%;
-    z-index: 20;
+    z-index: 1000;
     position: fixed;
 }
 
@@ -64,11 +64,12 @@ nav ul li:hover{
 @media screen and (max-width: 767px) {
     nav {
         width: 100%;
+        height: 5rem;
         border-radius: 0 0 1rem 1rem;
     }
     nav .menuIcon {
         display: block;
-        top: 5%;
+        top: 25%;
     }
     nav .navMenu {
         width: 100%;
@@ -78,7 +79,7 @@ nav ul li:hover{
         transform: translateY(-120%);
     }
     .navMenu.open {
-        transform: translateY(0);
+        transform: translateY(35%);
       }
     nav p {
         display: none;

@@ -1,0 +1,13 @@
+.card {
+    color: #cfcfcf;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(120px);
+}
+  
+.card.show {
+    height: 20rem;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}

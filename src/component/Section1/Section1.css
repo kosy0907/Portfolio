@@ -1,163 +1,212 @@
-.home {
-  height: 100vh;
+.home2 {
+    height: 100vh;
+    background-color: #04001B;
+    color: #FFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* layer */
-.introBg {
-  height: fit-content;
-  display: flex;
-  justify-content: center;
+.customCircle {
+    border-radius: 0 50% 0 50%;
+    background-color: #039FA5;
+    width: 50vh;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.homeContainer {
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.pixelContainer {
+    width: 35rem;
+    height: 35rem;
+    border-radius: 50%;
+    background-size: cover;
+    position: absolute;
+    overflow-x: hidden;
+    left: 10%;
 }
 
 .intro {
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .bg1 {
-  background-image: url(../../images/background/moon.png);
-}
-
-.bg2 {
-  background-image: url(../../images/background/stars.gif);
-}
-
-.bg3 {
-  background-image: url(../../images/background/mountain.png);
-}
-
-.bg4 {
-  background-image: url(../../images/background/building1.gif);
-}
-
-.bg5 {
-  background-image: url(../../images/background/building2.gif);
-}
-
-.bg6 {
-  background-image: url(../../images/background/object.gif);
-}
+    background-image: url(../../images/background/moon_2.jpg);
+  }
+  
+  .bg2 {
+    background-image: url(../../images/background/stars.gif);
+  }
+  
+  .bg3 {
+    background-image: url(../../images/background/mountain.png);
+  }
+  
+  .bg4 {
+    background-image: url(../../images/background/building1.gif);
+  }
+  
+  .bg5 {
+    background-image: url(../../images/background/building2.gif);
+  }
+  
+  .bg6 {
+    background-image: url(../../images/background/object.gif);
+  }
 
 /*text*/
-.cover {
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-}
-
 .text {
-  color: #fff;;
-  position: absolute;
-  left: 20%;
-}
-
-.scrollContainer {
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: 700; 
-}
-
-.scrollBox {
-  height: 3rem;
-  overflow: hidden;
-}
-
-.scrollBox ul {
-  margin-right: 0.625rem;
-  padding: 0;
-  animation: scrollUp 5s infinite;
-}
-
-@keyframes scrollUp {
-  15%, 25% {
-    transform: translateY(-33%);
- }
-  40%, 50% {
-    transform: translateY(-66%);
- }
-}
-
-.fixedContainer {
-  margin: 2.5rem 0;
-}
-
-.fixedContainer ul {
-  padding: 0;
-  list-style: none;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.fixedContainer ul li span {
-  color: #03d2e0;
-  font-size: 1.5rem;
-}
-
-.bounceArrow {
-  animation: bounce 2s ease infinite;
-}
-
-@keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-2rem);}
-	60% {transform: translateY(-1rem);}
-}
-
-.toAboutBtn {
-  background: none;
-  border: 2px solid #02C0CC;
-  border-radius: 10px;
-  width: 7rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.toAboutBtn:hover {
-  background: #02C0CC;
-}
-
-@media screen and (max-width: 767px) {
+    color: #fff;;
+    position: absolute;
+    left: 45%;
+  }
+  
   .scrollContainer {
-    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700; 
   }
-
+  
   .scrollBox {
-    height: 1.5rem;
+    height: 3rem;
+    overflow: hidden;
   }
-
-  .fixedContainer ul li {
-    font-size: 0.8rem;
+  
+  .scrollBox ul {
+    margin-right: 0.625rem;
+    padding: 0;
+    animation: scrollUp 5s infinite;
   }
-
+  
+  @keyframes scrollUp {
+    15%, 25% {
+      transform: translateY(-33%);
+   }
+    40%, 50% {
+      transform: translateY(-66%);
+   }
+  }
+  
+  .fixedContainer {
+    margin: 2.5rem 0;
+  }
+  
+  .fixedContainer ul {
+    padding: 0;
+    list-style: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  
   .fixedContainer ul li span {
-    font-size: 1rem;
+    color: #03d2e0;
+    font-size: 1.5rem;
   }
-
-  .intro {
-    justify-content: center;
-  }
-
-  .text {
-    position: static;
-    width: 80%;
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
   
-} 
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .bounceArrow {
+    animation: bounce 2s ease infinite;
+  }
   
+  @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-2rem);}
+      60% {transform: translateY(-1rem);}
+  }
+  
+  .toAboutBtn {
+    padding: 1rem 1.25rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: all 0.5s ease 0s; 
+    position: relative; 
+    display: inline-block; 
+    outline: none; 
+    border-radius: 10px; 
+    z-index: 0; 
+    overflow: hidden; 
+    border: 2px solid #03d2e0; 
+    color: #03d2e0;
+  }
+
+  .toAboutBtn:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .toAboutBtn:hover::after {
+    width: 100%;
+  }
+
+  .toAboutBtn::after { 
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 100%;
+    background: #03d2e0; 
 }
+  
+  @media screen and (max-width: 1024px) {
+    .customCircle {
+        display: none;
+    }
+    .homeContainer {
+        background-color: rgb(0,0,0,0.7);
+    }
+    .pixelContainer {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        left: 0;
+    }
+    
+    .scrollContainer {
+      font-size: 1rem;
+    }
+  
+    .scrollBox {
+      height: 1.5rem;
+    }
+  
+    .fixedContainer ul li {
+      font-size: 0.8rem;
+    }
+  
+    .fixedContainer ul li span {
+      font-size: 1rem;
+    }
+  
+    .text {
+      position: static;
+      width: 80%;
+      margin: auto;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    
+  } 
+  
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    
+  }
