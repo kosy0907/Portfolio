@@ -2,7 +2,6 @@
 링크: [Portfolio](http://링크)
 - Home
 - About
-- Skill
 - Project
 
 ## 📑 역할
