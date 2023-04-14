@@ -20,7 +20,7 @@ function Section1(props) {
     }, []);
 
     return (
-        <div className='home2'>
+        <div className='home'>
             <div className='customCircle' />
             <div className='pixelContainer'>
                 <div className='intro bg1' style={{ backgroundPositionY: position / 8 }} />
@@ -45,7 +45,7 @@ function Section1(props) {
 
                     <div className='fixedContainer'>
                         <ul>
-                            <li><span>React.js</span>를 활용하여 프로젝트를 개발합니다.</li>
+                            <li><span>React.js</span>를 활용하여 프로젝트를 진행합니다.</li>
                             <li>웹 개발 시 <span>반응형 웹</span>을 고려하여 개발합니다.</li>
                             <li>공부한 내용을 <span>블로그</span>에 게시하여 스터디를 진행합니다.</li>
                         </ul>

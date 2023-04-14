@@ -52,14 +52,7 @@ function Section4(props, projectRef) {
                                 <div className='projectTitle'>
                                     {projectItem.map((item, id) => {
                                         return (
-                                            <div key={id}
-                                                style={{
-                                                    color: '#fff',
-                                                    fontSize: '1.2rem',
-                                                    width: '7rem',
-                                                    marginBottom: '0.5rem'
-                                                }}
-                                                onClick={() => handleItemClick(item)}>{item.title}</div>
+                                            <div key={id} onClick={() => handleItemClick(item)}>{item.title}</div>
                                         )
                                     })}
                                 </div>
