@@ -61,7 +61,6 @@ function Section2(props, aboutRef) {
                                             <li>정보처리기사 2022.06.17</li>
                                             <li>SQLD(SQL 개발자) 2022.06.24</li>
                                             <li>SW테스트 전문가(CSTS) FL 2022.08.20</li>
-                                            <li>OCAJP 2023.04</li>
                                         </ul>
                                     </div>
                                     <div className='col-md-4'>
