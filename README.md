@@ -1,5 +1,5 @@
 # 포트폴리오 웹사이트
-링크: [Portfolio](http://링크)
+링크: [Portfolio](http://kosy0907.github.io/Portfolio)
 - Home
 - About
 - Project
@@ -15,6 +15,7 @@
 
 ## 💻 개발 환경
 - React.js
+- GitHub Deploy
 
 ## ✔ 기능
 ✅ Custom Cursor
