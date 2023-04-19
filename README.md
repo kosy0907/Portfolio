@@ -1,5 +1,5 @@
 # 포트폴리오 웹사이트
-링크: [Portfolio](http://링크)
+링크: [Portfolio](https://kosy0907.github.io/Portfolio/)
 - Home
 - About
 - Project
