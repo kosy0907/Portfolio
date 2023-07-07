@@ -20,60 +20,6 @@ export const projectItem = [
     },
     {
         id: 2,
-        title: 'Re-Book',
-        period: '2023-04 ~ 2023-05',
-        description: '나만의 책 리뷰를 작성하고 이미지화하여 공유하는 웹 사이트입니다.',
-        tag: [
-            {
-                role: 'All'
-            },
-            {
-                type: 'Personal'
-            }
-        ],
-        img: 'rebook_mockup',
-        link: '#',
-        code: 'https://github.com/kosy0907/Re-book',
-        color: 'brown'
-    },
-    {
-        id: 3,
-        title: 'PixelPlay',
-        period: '2023-04-10 ~ 2023-04-20',
-        description: '픽셀아트를 제작하여 GIF로 변환할 수 있는 웹 사이트입니다.',
-        tag: [
-            {
-                role: 'All'
-            },
-            {
-                type: 'Personal'
-            }
-        ],
-        img: 'pixelplay_mockup',
-        link: '#',
-        code: 'https://github.com/kosy0907/PixelPlay',
-        color: '#02422'
-    },
-    {
-        id: 4,
-        title: 'Key-T',
-        period: '2023-04-14 ~ 개발중',
-        description: '키워드를 입력하면 영화나 드라마를 추천해주는 웹 사이트입니다.',
-        tag: [
-            {
-                role: 'All'
-            },
-            {
-                type: 'Personal'
-            }
-        ],
-        img: 'keyt_mockup',
-        link: '#',
-        code: 'https://github.com/kosy0907/KeyT',
-        color: '#150016'
-    },
-    {
-        id: 5,
         title: 'Portfolio',
         period: '2023-03-31 ~ 2023-04-10',
         description: '프로젝트와 소개를 넣은 개인 포트폴리오 웹 사이트 입니다.',
@@ -86,8 +32,26 @@ export const projectItem = [
             }
         ],
         img: 'portfolio_mockup',
-        link: '#',
+        link: 'https://kosy0907.github.io/Portfolio',
         code: 'https://github.com/kosy0907/Portfolio',
         color: '#03d2e0'
     },
+    {
+        id: 3,
+        title: 'EV-map',
+        period: '2023-01-21 ~ 2023-01-30',
+        description: '서울시 내의 지하철역 근처 교통약자용 엘리베이터 위치를 지도에 표시해주는 웹 사이트입니다.',
+        tag: [
+            {
+                role: 'All'
+            },
+            {
+                type: 'Personal'
+            }
+        ],
+        img: 'evmap_mockup',
+        link: 'https://kosy0907.github.io/EV-map',
+        code: 'https://github.com/kosy0907/EV-map',
+        color: '#02422'
+    }
 ]

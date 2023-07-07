@@ -20,8 +20,8 @@ function Card(props) {
             <div className='cardTitle'>{item.title}</div>
             <div className='cardDescription'>{item.description}</div>
             <div className='cardPeriod'>개발 기간: {item.period}</div>
-            <div className='cardLink'>Link: {item.link}</div>
-            <div className='cardCode'>Code: {item.code}</div>
+            <div className='cardLink'>Link: <span className='webLink' onClick={() => window.open(item.link, '_blank')}>{item.link}</span></div>
+            <div className='cardCode'>Code: <span className='webLink' onClick={() => window.open(item.code, '_blank')}>{item.code}</span></div>
         </div>
     );
 }

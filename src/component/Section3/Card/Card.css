@@ -19,6 +19,7 @@
 }
 
 .cardTitle {
+    font-size: 1.5rem;
     font-weight: 900;
     margin: 1rem 0;
 }
@@ -26,6 +27,15 @@
 .cardImg img {
     width: 35rem;
     height: auto;
+}
+
+.cardDescription {
+    margin: 1rem 0;
+}
+
+.webLink:hover {
+    color: #03d2e0;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 767px) {
@@ -36,20 +46,11 @@
 
     .cardContainer {
         padding-top: 2rem;
+        font-size: 0.75rem;
     }
 
     .cardImg img {
         width: 15rem;
         height: auto;
     }
-}
-  
-@media screen and (min-width: 768px) and (max-width: 991px) {
-} 
-  
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-}
-  
-@media screen and (min-width: 1200px) {
-
 }
