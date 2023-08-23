@@ -7,7 +7,6 @@
 ## 📑 역할
 - Design
 - FrontEnd
-- BackEnd
 - Deploy
 
 ## 💬 프로젝트 소개
