@@ -53,5 +53,23 @@ export const projectItem = [
         link: 'https://kosy0907.github.io/EV-map',
         code: 'https://github.com/kosy0907/EV-map',
         color: '#02422'
+    },
+    {
+        id: 4,
+        title: 'Good News',
+        period: '2023-08-12 ~ 진행중',
+        description: '오늘의 좋은 소식을 알려주는 웹 사이트입니다.',
+        tag: [
+            {
+                role: 'All'
+            },
+            {
+                type: 'Personal'
+            }
+        ],
+        img: 'goodnews_mockup',
+        lik: 'https://kosy0907.github.io/Portfolio',
+        code: 'https://github.com/kosy0907/GoodNews',
+        color: '#02422'
     }
 ]
