@@ -16,6 +16,7 @@
 .row .comment {
   margin-bottom: 2.5rem;
   font-weight: 700;
+  font-family: 'Pretendard-Regular', 'sans-selif';
 }
 
 .row p {
@@ -25,7 +26,8 @@
 
 .row ul {
   list-style: none;
-  padding: 0
+  padding: 0;
+  font-family: 'Pretendard-Regular', 'sans-selif';
 }
 
 .row ul li {

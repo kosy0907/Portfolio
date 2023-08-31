@@ -6,34 +6,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.customCircle {
-    border-radius: 0 50% 0 50%;
-    background-color: #039FA5;
-    width: 50vh;
-    height: 50vh;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    font-family: 'Pretendard-Regular', 'sans-serif';
 }
 
 .homeContainer {
-    z-index: 200;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(0,0,0,0.7);
 }
 
 .pixelContainer {
-    width: 35rem;
-    height: 35rem;
-    border-radius: 50%;
-    background-size: cover;
-    position: absolute;
-    overflow-x: hidden;
-    left: 10%;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  position: absolute;
+  overflow-x: hidden;
 }
 
 .intro {
@@ -75,18 +65,18 @@
 .text {
     color: #fff;;
     position: absolute;
-    left: 45%;
+    left: 20%;
   }
   
   .scrollContainer {
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700; 
   }
   
   .scrollBox {
-    height: 3rem;
+    height: 2rem;
     overflow: hidden;
   }
   
@@ -98,27 +88,32 @@
   
   @keyframes scrollUp {
     15%, 25% {
-      transform: translateY(-33%);
+      transform: translateY(-35%);
    }
     40%, 50% {
-      transform: translateY(-66%);
+      transform: translateY(-67%);
    }
   }
   
   .fixedContainer {
-    margin: 2.5rem 0;
+    margin: 1.25rem 0;
   }
   
   .fixedContainer ul {
     padding: 0;
     list-style: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .fixedContainer ul li:nth-child(n+3) {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 500;
   }
   
   .fixedContainer ul li span {
     color: #03d2e0;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   
   .bounceArrow {
@@ -167,38 +162,21 @@
 }
   
   @media screen and (max-width: 1024px) {
-    .customCircle {
-        display: none;
-    }
-    .homeContainer {
-        background-color: rgb(0,0,0,0.7);
-    }
-    .pixelContainer {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        left: 0;
-    }
-    
-    .scrollContainer {
-      font-size: 1rem;
-    }
-  
-    .scrollBox {
-      height: 1.5rem;
-    }
-  
-    .fixedContainer ul li {
-      font-size: 0.8rem;
-    }
-  
-    .fixedContainer ul li span {
-      font-size: 1rem;
-    }
-  
     .text {
       position: static;
       width: 80%;
       margin: auto;
+    }
+
+    .scrollContainer {
+      font-size: 1.25rem;
+    }
+
+   .fixedContainer ul li:nth-child(n+3), .fixedContainer ul li {
+      font-size: 0.9rem;
+    }
+
+    .fixedContainer ul li span {
+      font-size: 1rem;
     }
   }

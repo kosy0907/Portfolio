@@ -8,6 +8,10 @@
     opacity: 0;
     transform: translateX(120px);
 }
+
+.card div:nth-child(n+3) {
+    font-family: 'Pretendard-Regular', 'sans-selif';
+}
   
 .card.show {
     border: none;

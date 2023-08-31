@@ -43,7 +43,7 @@ function Section4(props, projectRef) {
             <div className='wrap'>
                 <div className='title fadeTarget'>
                     <p>PROJECT</p>
-                    <p style={{ color: '#CBE4DE', fontSize: '1rem', margin: '0' }}>프로젝트를 클릭해주세요!</p>
+                    <p style={{ color: '#CBE4DE', fontSize: '1rem', margin: '0', fontFamily: 'Pretendard-Regular' }}>프로젝트를 클릭해주세요!</p>
                 </div>
                 <div className='projectContent fadeTarget'>
                     <div className='container'>
