@@ -4,6 +4,10 @@ import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faReadme } from '@fortawesome/free-brands-svg-icons';
 import { skillData } from './skillData';
 import './Section2.css';
+import Clock from '../../images/icon/clock.gif';
+import Book from '../../images/icon/book.gif';
+import Pen from '../../images/icon/pen.gif';
+import Complete from '../../images/icon/complete.gif';
 
 const gitHubUrl = "https://github.com/kosy0907"
 const blogUrl = "https://kosy.tistory.com/"
@@ -37,7 +41,8 @@ function Section2(props, aboutRef) {
                     <p>About Me</p>
                 </div>
                 <div className='aboutContent fadeTarget'>
-                    <div className="container" style={{ padding: '0' }}>
+                    <div className="container" style={{ padding: '0', display: 'flex', flexDirection: 'column' }}>
+
                         <div className="row">
                             <div className="col-lg-1 d-none d-lg-block">
                                 <FontAwesomeIcon icon={faCommentDots} beat size='2x' color='#03d2e0' />
@@ -83,6 +88,38 @@ function Section2(props, aboutRef) {
                                 </div>
                             </div>
                         </div>
+
+                        <ul className='aboutIcon'>
+                            <li>
+                                <img src={Clock} alt='clock' />
+                                <dl>
+                                    <dt>#성실함</dt>
+                                    <dd>시간 약속에 늦지 않습니다.</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <img src={Complete} alt='complete' />
+                                <dl>
+                                    <dt>#꼼꼼함</dt>
+                                    <dd>시간을 들여 꼼꼼하게<br />일을 처리합니다.</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <img src={Book} alt='book' />
+                                <dl>
+                                    <dt>#도전 정신</dt>
+                                    <dd>새로운 것을 배우는 것을<br />두려워하지 않습니다.</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <img src={Pen} alt='pen' />
+                                <dl>
+                                    <dt>#기록</dt>
+                                    <dd>기록하는 습관을 통해<br />해야 할 일을 잊지 않고 챙깁니다.</dd>
+                                </dl>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
