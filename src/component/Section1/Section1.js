@@ -49,7 +49,7 @@ function Section1(props) {
                             <li>공부한 내용을 <span>블로그</span>에 게시하여 스터디를 진행합니다<span>.</span></li>
                         </ul>
                     </div>
-                    <div style={{ marginTop: "3rem" }}>
+                    <div style={{ marginTop: "2rem" }}>
                         <FontAwesomeIcon className='bounceArrow' icon={faAngleDown} size="2x" />
                     </div>
                     <div className='toAboutBtn' onClick={toAbout}>

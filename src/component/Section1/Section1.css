@@ -154,6 +154,18 @@
     height: 100%;
     background: #03d2e0; 
 }
+
+@media screen and (max-width: 300px) {
+  body {
+    font-size: 0.5rem !important;
+  }
+  .text {
+    width: 90%;
+  }
+  .fixedContainer {
+    margin: 0.5rem 0 !important;
+  }
+}
   
   @media screen and (max-width: 1024px) {
     .text {
@@ -164,7 +176,11 @@
     }
 
     .scrollContainer {
-      font-size: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .scrollBox {
+      height: 1.25rem;
     }
 
    .fixedContainer ul li:nth-child(n+3), .fixedContainer ul li {
