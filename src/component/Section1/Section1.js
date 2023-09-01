@@ -21,22 +21,20 @@ function Section1(props) {
 
     return (
         <div className='home'>
-            <div className='pixelContainer'>
-                <div className='intro bg1' style={{ backgroundPositionY: position / 8 }} />
-                <div className='intro bg2' style={{ backgroundPositionY: position }} />
-                <div className='intro bg3' style={{ backgroundPositionY: position / 2 }} />
-                <div className='intro bg4' style={{ backgroundPositionY: position / 2 }} />
+            <div className='parallaxContainer'>
                 <div className='intro bg5' style={{ backgroundPositionY: position / 2 }} />
+                <div className='stars'>
+                    <div id='star' />
+                </div>
                 <div className='intro bg6' style={{ backgroundPositionY: position / 10 }} />
-            </div>
-            <div className='homeContainer'>
+
                 <div className='text'>
                     <div className='scrollContainer'>
                         <div className='scrollBox'>
                             <ul>
                                 <li style={{ color: "#03d2e0" }}>웹 개발을</li>
                                 <li style={{ color: "#025FCC" }}>기록을</li>
-                                <li style={{ color: "#CC9F02" }}>픽셀아트를</li>
+                                <li style={{ color: "#CC9F02" }}>새로운 도전을</li>
                             </ul>
                         </div>
                         <span style={{ color: "#fff" }}>좋아하는 <span style={{ color: '#02C0CC' }}>고승연</span>입니다.</span>

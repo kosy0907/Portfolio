@@ -1,11 +1,53 @@
-.aboutContent {
-  margin-top: 5rem;
-  font-family: 'Rajdhani', 'sans-selif';
-  color: #34323F;
+.aboutBanner {
+  background-image: url('../../images/background/cosmos.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 10rem 0 2rem;
+  font-family: 'Pretendard-Regular', 'sans-serif';
 }
 
-.container {
-  padding: 0;
+.bannerComment {
+  display: flex;
+  width: 40%;
+  z-index: 100;
+}
+
+.bannerContent {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  z-index: 100;
+}
+
+.bannerComment p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 2rem 0;
+}
+
+.aboutBanner .container, .row {
+  display: flex;
+}
+
+.row p {
+  color: #03d2e0;
+  margin: 0;
+}
+
+.aboutSkill {
+  background-color: #1B2430;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.aboutSkill p {
+  margin: 1rem 0;
 }
 
 .fadeIn {
@@ -13,67 +55,47 @@
   animation-duration: 1s;
 }
 
+/*gif Icon*/
 .aboutIcon {
-  padding-left: 0;
+  padding: 2rem 0;
 }
 
 .aboutIcon li {
   text-align: center;
-  width: 20%;
-  margin: 0 1rem;
+  width: 25%;
   list-style: none;
   float: left;
   font-family: 'Pretendard-Regular', 'sans-selif';
   font-size: 1rem;
 }
 
+.aboutIcon li div {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.gifClock {
+  background-image: url(../../images/icon/clock.gif);
+}
+
+.gifComplete {
+  background-image: url(../../images/icon/complete.gif);
+}
+
+.gifBook {
+  background-image: url(../../images/icon/book.gif);
+}
+
+.gifPen {
+  background-image: url(../../images/icon/pen.gif);
+}
+
 .aboutIcon li dt {
   font-size: 1.25rem;
   margin-bottom: 0.7rem;
-}
-
-.aboutIcon img {
-  width: 80px;
-  height: 80px;
-}
-
-.row .comment {
-  margin-bottom: 2.5rem;
-  font-weight: 700;
-  font-family: 'Pretendard-Regular', 'sans-selif';
-}
-
-.row p {
-  margin-bottom: 0.75rem;
-  font-size: 1.2rem;
-}
-
-.row ul {
-  list-style: none;
-  padding: 0;
-  font-family: 'Pretendard-Regular', 'sans-selif';
-}
-
-.row ul li {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.skillWrap {
-  display: flex;
-}
-
-.skillDiv {
-  width: 7rem;
-  height: 7rem;
-  background-color: #eaeaea;
-  margin: 3rem 0.5rem 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-weight: 900;
-  color: #34323F;
 }
 
 .link {
@@ -85,66 +107,56 @@
   color: #03d2e0;
 }
 
-@media screen and (max-width: 767px) {
-  .about {
-    padding-top: 5rem;
+@media screen and (max-height: 768px) {
+  .aboutBanner {
+    padding: 7rem 0 2rem;
   }
-
-  .aboutContent {
-    width: 100%;
+  .aboutSkill {
+    font-size: 1rem;
+  }
+  .aboutIcon {
     padding: 0;
-    margin: 1rem 0;
-  }
-
-  .aboutContent div {
-    padding: 0;
-    margin: 0;
-  }
-
-  .row .comment {
-    margin: 1rem 0 1.5rem 0;
-  }
-
-  .row {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .row p {
-    font-size: 0.75rem;
-    font-weight: 900;
-  }
-
-  .row ul li {
-    font-size: 0.75rem;
-  }
-
-  .row .col-md-4 {
-    margin: 0.25rem 0;
-  }
-
-  .skillDiv {
-    height: 3rem;
-  }
-
-  .skillDiv p {
-    display: none;
-  }
+  }  
 }
 
-@media screen and (max-width: 1024px) and (max-height: 600px) { 
-  .aboutContent {
-    margin-top: 2rem;
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 80% !important;
   }
-  
-  .skillWrap {
-    display: none;
+  .row {
+    width: 100%;
   }
- } 
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .about {
-    margin-top: 5rem;
+  .aboutBanner {
+    padding: 5rem 0 2rem;
+    font-size: 0.8rem;
   }
-} 
+  .bannerComment {
+    padding-bottom: 1rem;
+  }
+  .bannerContent {
+    flex-direction: column;
+  }
+  .aboutSkill {
+    font-size: 1rem;
+  }
+  .aboutSkill p {
+    margin: 0.5rem 0;
+  }
+  .aboutIcon {
+    padding: 0;
+  }
+  .aboutIcon li {
+    width: 50%;
+  }
+  .aboutIcon li div {
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem auto;
+  }
+  .aboutIcon li dd {
+    font-size: 0.8rem;
+  }
+  .aboutIcon li dt {
+    font-size: 1rem;
+  }
+ }
