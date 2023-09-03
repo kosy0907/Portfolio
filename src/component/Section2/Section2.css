@@ -58,6 +58,7 @@
 /*gif Icon*/
 .aboutIcon {
   padding: 2rem 0;
+  margin-top: 2rem;
 }
 
 .aboutIcon li {
@@ -70,8 +71,8 @@
 }
 
 .aboutIcon li div {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   margin: 1rem auto;
   background-size: cover;
   background-position: center;
@@ -124,6 +125,7 @@
   }
   .aboutIcon {
     padding: 0;
+    margin-top: 0;
   }  
 }
 
@@ -170,11 +172,6 @@
   }
   .aboutIcon li {
     width: 50%;
-  }
-  .aboutIcon li div {
-    width: 4rem;
-    height: 4rem;
-    margin: 1rem auto;
   }
   .aboutIcon li dd {
     font-size: 0.8rem;

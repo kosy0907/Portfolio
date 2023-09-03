@@ -19,12 +19,12 @@
   height: 100vh;
 }
   
-.bg5 {
-  background-image: url(../../images/background/sky.jpg);
+.bg1 {
+  background-image: url(../../images/background/sec1_sky.jpg);
 }
   
-.bg6 {
-  background-image: url(../../images/background/mountain.png);
+.bg2 {
+  background-image: url(../../images/background/sec1_mountain.png);
 }
 
 /*star animation*/

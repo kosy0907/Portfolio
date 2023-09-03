@@ -22,11 +22,11 @@ function Section1(props) {
     return (
         <div className='home'>
             <div className='parallaxContainer'>
-                <div className='intro bg5' style={{ backgroundPositionY: position / 2 }} />
+                <div className='intro bg1' style={{ backgroundPositionY: position / 2 }} />
                 <div className='stars'>
                     <div id='star' />
                 </div>
-                <div className='intro bg6' style={{ backgroundPositionY: position / 10 }} />
+                <div className='intro bg2' style={{ backgroundPositionY: position / 10 }} />
 
                 <div className='text'>
                     <div className='scrollContainer'>
