@@ -77,7 +77,7 @@ function Section2(props, aboutRef) {
                 })}
             </div>
 
-            {/* About personality*/}
+            {/* About personality
             <div className='aboutPersonality'>
                 <div className='container fadeTarget'>
                     <ul className='aboutIcon'>
@@ -112,7 +112,7 @@ function Section2(props, aboutRef) {
                     </ul>
 
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

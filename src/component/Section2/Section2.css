@@ -1,10 +1,15 @@
-.aboutBanner {
-  background-image: url('../../images/background/cosmos.png');
+.about {
+  background-image: url('../../images/background/stars.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.aboutBanner {
+  height: 90%;
   color: #fff;
-  padding: 10rem 0 2rem;
   font-family: 'Pretendard-Regular', 'sans-serif';
+  display: flex;
+  align-items: center;
 }
 
 .bannerComment {
@@ -26,8 +31,12 @@
   margin: 0 2rem 0;
 }
 
-.aboutBanner .container, .row {
+.container, .row {
   display: flex;
+}
+
+.container {
+  margin-top: 3rem;
 }
 
 .row p {
@@ -36,7 +45,7 @@
 }
 
 .aboutSkill {
-  background-color: #1B2430;
+  background-color: #767AC5;
   color: #fff;
   display: flex;
   justify-content: space-evenly;
@@ -44,6 +53,7 @@
   font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
+  height: 10%;
 }
 
 .aboutSkill p {
@@ -53,50 +63,6 @@
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 1s;
-}
-
-/*gif Icon*/
-.aboutIcon {
-  padding: 2rem 0;
-  margin-top: 2rem;
-}
-
-.aboutIcon li {
-  text-align: center;
-  width: 25%;
-  list-style: none;
-  float: left;
-  font-family: 'Pretendard-Regular', 'sans-selif';
-  font-size: 1rem;
-}
-
-.aboutIcon li div {
-  width: 4rem;
-  height: 4rem;
-  margin: 1rem auto;
-  background-size: cover;
-  background-position: center;
-}
-
-.gifClock {
-  background-image: url(../../images/icon/clock.gif);
-}
-
-.gifComplete {
-  background-image: url(../../images/icon/complete.gif);
-}
-
-.gifBook {
-  background-image: url(../../images/icon/book.gif);
-}
-
-.gifPen {
-  background-image: url(../../images/icon/pen.gif);
-}
-
-.aboutIcon li dt {
-  font-size: 1.25rem;
-  margin-bottom: 0.7rem;
 }
 
 .link {
@@ -109,30 +75,9 @@
 }
 
 @media screen and (max-width: 540px) and (max-height: 768px) {
-  .aboutIcon li div {
-    margin: 0 auto !important;
-    width: 2.5rem !important;
-    height: 2.5rem !important;
-  }
-  .aboutIcon li dt, dt {
-    font-size: 0.8rem !important;
-  }
-  .aboutBanner {
-    padding: 7rem 0 2rem;
-  }
   .aboutSkill p {
     font-size: 0.8rem;
-  }
-  .aboutIcon {
-    padding: 0;
-    margin-top: 0;
-  }  
-}
-
-@media screen and (min-width: 541px) and (max-width: 820px) {
-  .aboutIcon {
-    padding-top: 5rem !important;
-  }
+  } 
 }
 
 @media screen and (max-width: 1024px) {
@@ -146,7 +91,6 @@
     width: 100%;
   }
   .aboutBanner {
-    padding: 5rem 0 2rem;
     font-size: 0.8rem;
   }
   .fontAwesome {
@@ -166,17 +110,5 @@
   }
   .aboutSkill p {
     margin: 0.5rem 0;
-  }
-  .aboutIcon {
-    padding: 0;
-  }
-  .aboutIcon li {
-    width: 50%;
-  }
-  .aboutIcon li dd {
-    font-size: 0.8rem;
-  }
-  .aboutIcon li dt {
-    font-size: 1rem;
   }
  }

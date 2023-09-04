@@ -99,11 +99,6 @@
     font-size: 1rem;
     font-weight: 500;
   }
-
-  .fixedContainer ul li:nth-child(n+3) {
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
   
   .fixedContainer ul li span {
     color: #03d2e0;
@@ -183,7 +178,7 @@
       height: 1.25rem;
     }
 
-   .fixedContainer ul li:nth-child(n+3), .fixedContainer ul li {
+   .fixedContainer ul li {
       font-size: 0.9rem;
     }
 

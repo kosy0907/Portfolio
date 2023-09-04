@@ -43,7 +43,7 @@ function Section1(props) {
                     <div className='fixedContainer'>
                         <ul>
                             <li>안녕하세요! 저의 포트폴리오에 오신 것을 환영합니다!</li>
-                            <li style={{ marginBottom: '2.5rem' }}>궁금한 점이 있으시다면 언제든지 연락주시길 바랍니다.</li>
+                            <li style={{ marginBottom: '1.5rem' }}>궁금한 점이 있으시다면 언제든지 연락주시길 바랍니다.</li>
                             <li><span>React.js</span>를 활용하여 프로젝트를 진행합니다<span>.</span></li>
                             <li>웹 개발 시 <span>반응형 웹</span>을 고려하여 개발합니다<span>.</span></li>
                             <li>공부한 내용을 <span>블로그</span>에 게시하여 스터디를 진행합니다<span>.</span></li>
