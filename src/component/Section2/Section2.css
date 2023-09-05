@@ -1,5 +1,5 @@
 .about {
-  background-image: url('../../images/background/stars.jpg');
+  background-image: url('../../images/background/stars.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -14,12 +14,14 @@
 
 .bannerComment {
   display: flex;
+  justify-content: center;
   width: 40%;
   z-index: 100;
 }
 
 .bannerContent {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   width: 60%;
   z-index: 100;
@@ -72,12 +74,6 @@
 
 .link:hover {
   color: #03d2e0;
-}
-
-@media screen and (max-width: 540px) and (max-height: 768px) {
-  .aboutSkill p {
-    font-size: 0.8rem;
-  } 
 }
 
 @media screen and (max-width: 1024px) {
