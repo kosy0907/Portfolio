@@ -1,14 +1,10 @@
 .project {
-    background-color: #7e769e;
+    background-color: #f6f6f6;
     font-family: 'Rajdhani', sans-serif;
 }
 
-.projectContent .container {
-    padding-top: 1.5rem;
-}
-
-.projectContent .container, .projectContent .row {
-    height: 100%;
+.wrap {
+    padding: 5rem 0 0;
 }
 
 .projectTitle div {

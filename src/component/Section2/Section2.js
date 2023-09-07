@@ -33,8 +33,11 @@ function Section2(props, aboutRef) {
     return (
         <div className='about' ref={aboutRef}>
             {/* About Banner */}
+            <div className='sectionTitle fadeTarget'>
+                <p>About me</p>
+            </div>
             <div className='aboutBanner'>
-                <div className='container fadeTarget'>
+                <div className='container fadeTarget' id='aboutContainer'>
                     <div className='bannerComment'>
                         <FontAwesomeIcon icon={faUser} beat size='2x' color='#03d2e0' className='fontAwesome' />
                         <div className='commentText'>

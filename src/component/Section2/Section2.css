@@ -4,18 +4,36 @@
   background-size: cover;
 }
 
+.sectionTitle {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-weight: 900;
+  font-size: x-large;
+  font-family: 'Rajdhani', sans-serif;
+  color:#03d2e0;
+}
+
+#aboutContainer {
+  padding: 3rem 0;
+  border-radius: 20px;
+  background-color: rgb(45, 31, 118, 0.4);
+  justify-content: center;
+}
+
 .aboutBanner {
-  height: 90%;
+  height: 70%;
   color: #fff;
   font-family: 'Pretendard-Regular', 'sans-serif';
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 
 .bannerComment {
   display: flex;
   justify-content: center;
-  width: 40%;
+  width: 50%;
   z-index: 100;
 }
 
@@ -23,7 +41,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   z-index: 100;
 }
 
@@ -33,11 +51,7 @@
   margin: 0 2rem 0;
 }
 
-.container, .row {
-  display: flex;
-}
-
-.container {
+#aboutContainer {
   margin-top: 3rem;
 }
 
@@ -106,5 +120,8 @@
   }
   .aboutSkill p {
     margin: 0.5rem 0;
+  }
+  #aboutContainer {
+    padding: 3rem 0.5rem;
   }
  }

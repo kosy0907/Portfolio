@@ -34,8 +34,8 @@ ul {
   width: 100%;
 }
 
-.container {
-  padding: 0 !important;
+.container, .row {
+  display: flex;
 }
 
 .title {
