@@ -41,7 +41,17 @@ function Section3(props, projectRef) {
     return (
         <div className='project' ref={projectRef}>
             <div className='wrap'>
-
+                {projectItem.map((item) => {
+                    return (
+                        <div>
+                            <img src={require(`../../images/mockup/${item.img}.png`)} alt='mockup' style={{ width: '100px' }} />
+                            <h1>{item.title}</h1>
+                            <p>{item.description}</p>
+                            <p>{item.link}</p>
+                            <p>{item.code}</p>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     );
