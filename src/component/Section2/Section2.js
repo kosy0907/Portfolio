@@ -39,7 +39,6 @@ function Section2(props, aboutRef) {
             <div className='aboutBanner'>
                 <div className='container fadeTarget' id='aboutContainer'>
                     <div className='bannerComment'>
-                        <FontAwesomeIcon icon={faUser} beat size='2x' color='#03d2e0' className='fontAwesome' />
                         <div className='commentText'>
                             <p>KO SEUNG YEON</p>
                         </div>
