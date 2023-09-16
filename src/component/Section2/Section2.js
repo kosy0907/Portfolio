@@ -1,6 +1,5 @@
 import React, { forwardRef, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faReadme } from '@fortawesome/free-brands-svg-icons';
 import { skillData } from './skillData';
 import './Section2.css';
@@ -72,9 +71,9 @@ function Section2(props, aboutRef) {
 
             {/* About skill */}
             <div className='aboutSkill'>
-                {skillData.map((item) => {
+                {skillData.map((item, i) => {
                     return (
-                        <p>{item.name}</p>
+                        <p key={i}>{item.name}</p>
                     )
                 })}
             </div>

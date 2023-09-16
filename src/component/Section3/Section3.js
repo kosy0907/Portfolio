@@ -1,22 +1,8 @@
-import React, { forwardRef, useEffect, useState } from 'react';
-import SlideShow from './SlideShow/SlideShow';
-import { projectItem } from './SlideShow/projectItem';
+import React, { forwardRef, useEffect } from 'react';
 import './Section3.css';
+import Tab from './Tab/Tab';
 
 function Section3(props, projectRef) {
-    const [selectedItem, setSelectedItem] = useState(null);
-    const [isCardVisible, setIsCardVisible] = useState(false);
-
-    const handleItemClick = (item) => {
-        if (selectedItem === null) {
-            setSelectedItem({ ...item, show: true });
-            setIsCardVisible(true);
-        } else if (selectedItem.id !== item.id) {
-            setSelectedItem({ ...item, show: true });
-            setIsCardVisible(false);
-            window.requestAnimationFrame(() => setIsCardVisible(true));
-        }
-    };
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -41,11 +27,7 @@ function Section3(props, projectRef) {
     return (
         <div className='project' ref={projectRef}>
             <div className='wrap'>
-                {projectItem.map((item) => {
-                    return (
-                        <SlideShow item={item} />
-                    )
-                })}
+                <Tab />
             </div>
         </div>
     );
