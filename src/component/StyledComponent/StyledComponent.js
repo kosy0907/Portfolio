@@ -2,7 +2,59 @@ import Styled, { keyframes } from "styled-components";
 import homeBg from '../../images/background/sec1_sky.jpg';
 
 // Navbar
+export const NavbarToggle = Styled.div`
+    .navToggle {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 9998;
+        border: 0;
+        font-size: 24px;
+        transition: all 0.4s;
+        outline: none !important;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        line-height: 0;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: #149ddd;
+    }
+
+    @media (min-width: 1200px) {
+        display: none!important;
+    }
+`
+
 export const Header = Styled.div`
+    h1 {
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        text-align-last: center;
+    }
+
+    .icon {
+        width: 24px;
+        color: #6f7180;
+        paddingRight: 8px;
+        fontSize: 24px;
+
+        &:hover {
+            color: #149ddd;
+        }
+    }
+
+    .active {
+        left: 0 ;
+    }
+`
+
+export const HeaderContainer = Styled.div`
     color: white;
     position: fixed;
     top: 0;
@@ -11,85 +63,98 @@ export const Header = Styled.div`
     width: 300px;
     transition: all ease-in-out 0.5s;
     z-index: 9997;
-    transition: all 0.5s;
     padding: 0 15px;
     background: #040b14;
     overflow-y: auto;
+
+    @media (max-width: 1200px) {
+        left: -300px;
+    }
 `
 
-export const ProfileImg = Styled.img`
-    margin: 15px auto;
-    display: block;
-    width: 120px;
-    border: 8px solid #2c2f3f;
-    border-radius: 50% !important;
-    max-width: 100%;
-    height: auto;
-`
+export const Profile = Styled.div`
+    img {
+        margin: 15px auto;
+        display: block;
+        width: 120px;
+        border: 8px solid #2c2f3f;
+        border-radius: 50% !important;
+        max-width: 100%;
+        height: auto;
+    }
 
-export const Profileh1 = Styled.h1`
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
-    font-weight: 600;
-    text-align-last: center;
-`
+    .socialLink {
+        text-align: center;
+        margin: 2rem 3rem;
+        display: flex;
+        justify-content: space-evenly;
 
-export const SocialLink = Styled.div`
-    text-align: center;
-    margin: 2rem 3rem;
-    display: flex;
-    justify-content: space-evenly;
-`
+        a {
+            font-size: 18px;
+            display: inline-block;
+            background: #212431;
+            color: #fff;
+            line-height: 1;
+            padding: 8px 0;
+            margin-right: 4px;
+            border-radius: 50%;
+            text-align: center;
+            width: 36px;
+            height: 36px;
+            transition: 0.3s;
 
-export const SocialLinkItem = Styled.a`
-    text-decoration: none;
-    font-size: 18px;
-    display: inline-block;
-    background: #212431;
-    color: #fff;
-    line-height: 1;
-    padding: 8px 0;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
+            &:hover {
+                color: #149ddd;
+            }
+        }
+    }
 `
 
 export const NavbarContainer = Styled.nav`
     padding: 30px 0 0 0;
-`
 
-export const NavbarUl = Styled.ul`
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    
+        &:hover {
+            opacity:0.8;
+            filter:blur(0.4px);
+        }
+    
+        li {
+            position: relative;
+            white-space: nowrap;
+        
+            &:hover {
+                opacity:1;
+                filter:blur(0);
+                font-weight: 600;
+                color: #fff;
+            }
+        
+            a {
+                display: flex;
+                align-items: center;
+                color: #a8a9b4;
+                padding: 12px 15px;
+                margin-bottom: 8px;
+                transition: 0.3s;
+                font-size: 15px;
+                text-transform: uppercase;
+        
+                .active {
+                    color: #149ddd;
+                }
 
-    &:hover {
-        opacity:0.8;
-        filter:blur(0.4px);
-    }
-`
-
-export const NavbarLi = Styled.li`
-    position: relative;
-    white-space: nowrap;
-
-    &:hover {
-        opacity:1;
-        filter:blur(0);
-        font-weight: 600;
-    }
-
-    a {
-        display: flex;
-        align-items: center;
-        color: #a8a9b4;
-        padding: 12px 15px;
-        margin-bottom: 8px;
-        transition: 0.3s;
-        font-size: 15px;
+                span {
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
     }
 `
 
@@ -256,6 +321,7 @@ export const TabMenu = Styled.ul`
 export const ProjectList = Styled.div`
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 `
 
 export const ProjectItem = Styled.div`
@@ -263,5 +329,5 @@ export const ProjectItem = Styled.div`
 `
 
 export const MockupImg = Styled.img`
-    width: 300px;
+    width: 200px;
 `
