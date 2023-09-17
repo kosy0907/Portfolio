@@ -1,48 +1,41 @@
 import React, { forwardRef, useState } from 'react';
 import book from '../../images/icon/book.gif';
-import './Navbar.css';
-import { Header, NavbarLi, NavbarUl, ProfileImg, Profileh1, SocialLink, SocialLinka } from '../StyledComponent/StyledComponent';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faBook, faHouse, faUser, faFileInvoice } from '@fortawesome/free-solid-svg-icons';
+import { Header, NavbarContainer, NavbarLi, NavbarUl, ProfileImg, Profileh1, SocialLink, SocialLinkItem } from '../StyledComponent/StyledComponent';
 
-function Navbar(props) {
+function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     }
 
+    const gitUrl = 'https://github.com/kosy0907'
+    const blogUrl = 'https://kosy.tistory.com/'
+
     return (
         <Header>
-            <div class='d-flex flex-column'>
-                <div class='profile'>
-                    <ProfileImg src={book} alt='profile img' />
-                    <Profileh1 class='text-light'><a href='index.html'>Ko Seung Yeon</a></Profileh1>
+            <div className='d-lex flex-column'>
+                <div className='profile'>
+                    <ProfileImg src={book} alt='profile' />
+                    <Profileh1>Ko Seung Yeon</Profileh1>
                     <SocialLink>
-                        <SocialLinka className='github' href='#'><i class="ri-github-fill" /></SocialLinka>
-                        <SocialLinka className='Tistory' href='#'><i class="ri-book-2-line" /></SocialLinka>
+                        <SocialLinkItem href={gitUrl} target='_blank' className='github'><FontAwesomeIcon icon={faGithub} /></SocialLinkItem>
+                        <SocialLinkItem href={blogUrl} target='_blank' className='Tistory'><FontAwesomeIcon icon={faBook} /></SocialLinkItem>
                     </SocialLink>
                 </div>
-
-                <Navbar>
-                    <NavbarUl>
-                        <NavbarLi><a href="#home" class="nav-link scrollto active"><i class="ri-home-4-line" /> <span>Home</span></a></NavbarLi>
-                        <NavbarLi><a href="#about" class="nav-link scrollto"><i class="ri-user-line" /><span>About</span></a></NavbarLi>
-                        <NavbarLi><a href="#project" class="nav-link scrollto"><i class="ri-computer-line" /> <span>Project</span></a></NavbarLi>
-                    </NavbarUl>
-                </Navbar>
             </div>
-        </Header>
 
-        // <div className='navWrapper'>
-        //     <nav>
-        //         <FontAwesomeIcon color='#CBE4DE' className={`menuIcon ${menuOpen ? 'open' : ''}`} onClick={toggleMenu} icon={menuOpen ? faTimes : faBars} size="2x" />
-        //         <p>seungyeonko98@gmail.com</p>
-        //         <ul className={`navMenu ${menuOpen ? 'open' : ''}`}>
-        //             <li className='navBtn' onClick={HomeClick}>HOME<span>.</span></li>
-        //             <li className='navBtn' onClick={AboutClick}>ABOUT<span>.</span></li>
-        //             <li className='navBtn' onClick={ProjectClick}>PROJECT<span>.</span></li>
-        //         </ul>
-        //     </nav>
-        // </div>
+            <NavbarContainer>
+                <NavbarUl>
+                    <NavbarLi><a href='#home' style={{ textDecoration: 'none', color: '#fff' }}><FontAwesomeIcon icon={faHouse} style={{ paddingRight: '8px', fontSize: '24px', color: '#6f7180' }} /><span>Home</span></a></NavbarLi>
+                    <NavbarLi><a href='#about' style={{ textDecoration: 'none', color: '#fff' }}><FontAwesomeIcon icon={faUser} style={{ paddingRight: '8px', fontSize: '24px', color: '#6f7180' }} /><span>About</span></a></NavbarLi>
+                    <NavbarLi><a href='#project' style={{ textDecoration: 'none', color: '#fff' }}><FontAwesomeIcon icon={faFileInvoice} style={{ paddingRight: '8px', fontSize: '24px', color: '#6f7180' }} /><span>Project</span></a></NavbarLi>
+                </NavbarUl>
+            </NavbarContainer>
+        </Header>
     );
 }
 

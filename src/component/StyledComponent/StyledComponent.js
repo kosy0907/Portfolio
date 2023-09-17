@@ -2,7 +2,8 @@ import Styled, { keyframes } from "styled-components";
 import homeBg from '../../images/background/sec1_sky.jpg';
 
 // Navbar
-export const Header = Styled.header`
+export const Header = Styled.div`
+    color: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,7 +42,8 @@ export const SocialLink = Styled.div`
     justify-content: space-evenly;
 `
 
-export const SocialLinka = Styled.a`
+export const SocialLinkItem = Styled.a`
+    text-decoration: none;
     font-size: 18px;
     display: inline-block;
     background: #212431;
@@ -55,7 +57,7 @@ export const SocialLinka = Styled.a`
     transition: 0.3s;
 `
 
-export const Navbar = Styled.nav`
+export const NavbarContainer = Styled.nav`
     padding: 30px 0 0 0;
 `
 
@@ -63,11 +65,32 @@ export const NavbarUl = Styled.ul`
     margin: 0;
     padding: 0;
     list-style: none;
+
+    &:hover {
+        opacity:0.8;
+        filter:blur(0.4px);
+    }
 `
 
 export const NavbarLi = Styled.li`
     position: relative;
     white-space: nowrap;
+
+    &:hover {
+        opacity:1;
+        filter:blur(0);
+        font-weight: 600;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        color: #a8a9b4;
+        padding: 12px 15px;
+        margin-bottom: 8px;
+        transition: 0.3s;
+        font-size: 15px;
+    }
 `
 
 // Section1

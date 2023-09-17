@@ -1,40 +1,30 @@
-import { faHtml5, faCss3Alt, faJsSquare, faReact, faNode, faFigma } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-
 export const skillData = [
     {
         id: 1,
-        name: 'HTML',
-        icons: faHtml5
+        name: 'HTML'
     },
     {
         id: 2,
-        name: 'CSS',
-        icons: faCss3Alt
+        name: 'CSS'
     },
     {
         id: 3,
-        name: 'JS',
-        icons: faJsSquare
+        name: 'JS'
     },
     {
         id: 4,
-        name: 'React.js',
-        icons: faReact
+        name: 'React.js'
     },
     {
         id: 5,
-        name: 'Node.js',
-        icons: faNode
+        name: 'Node.js'
     },
     {
         id: 6,
-        name: 'MySQL',
-        icons: faDatabase
+        name: 'MySQL'
     },
     {
         id: 7,
-        name: 'Figma',
-        icons: faFigma
+        name: 'Figma'
     }
 ]

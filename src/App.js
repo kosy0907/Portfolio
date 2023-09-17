@@ -50,8 +50,7 @@ function App() {
   return (
     <div className="App">
       <Cursor />
-      <Navbar aboutRef={aboutRef} projectRef={projectRef}
-        setNavState={setNavState} navState={navState} />
+      <Navbar navState={navState} aboutRef={aboutRef} projectRef={projectRef} />
       <div className='section'>
         <Dots scrollIndex={scrollIndex} />
         <Section1 aboutRef={aboutRef} />

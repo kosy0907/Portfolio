@@ -1,6 +1,4 @@
 import React, { forwardRef, useEffect } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faReadme } from '@fortawesome/free-brands-svg-icons';
 import { skillData } from './skillData';
 import './Section2.css';
 
@@ -30,7 +28,7 @@ function Section2(props, aboutRef) {
     }, []);
 
     return (
-        <div className='about' ref={aboutRef}>
+        <div className='about' ref={aboutRef} id='about'>
             {/* About Banner */}
             <div className='sectionTitle fadeTarget'>
                 <p>About me</p>
@@ -61,8 +59,8 @@ function Section2(props, aboutRef) {
                         <div className='row'>
                             <p style={{ fontWeight: '900' }}>Archive</p>
                             <ul>
-                                <li><FontAwesomeIcon icon={faGithub} /> Github - <span className='link' style={{ cursor: 'pointer' }} onClick={() => window.open(gitHubUrl, '_blank')}>https://github.com/kosy0907</span></li>
-                                <li><FontAwesomeIcon icon={faReadme} /> Study Blog - <span className='link' style={{ cursor: 'pointer' }} onClick={() => window.open(blogUrl, '_blank')}>https://kosy.tistory.com</span></li>
+                                <li>Github - <span className='link' style={{ cursor: 'pointer' }} onClick={() => window.open(gitHubUrl, '_blank')}>https://github.com/kosy0907</span></li>
+                                <li>Study Blog - <span className='link' style={{ cursor: 'pointer' }} onClick={() => window.open(blogUrl, '_blank')}>https://kosy.tistory.com</span></li>
                             </ul>
                         </div>
                     </div>

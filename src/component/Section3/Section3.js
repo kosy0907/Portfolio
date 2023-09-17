@@ -25,7 +25,7 @@ function Section3(props, projectRef) {
     }, []);
 
     return (
-        <div className='project' ref={projectRef}>
+        <div className='project' ref={projectRef} id='project'>
             <div className='wrap'>
                 <Tab />
             </div>
