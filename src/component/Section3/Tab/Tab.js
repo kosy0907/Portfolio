@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { projectItem } from './projectItem';
-import { TabMenu, ProjectList, ProjectItem, MockupImg } from './StyledComponent';
+import { TabMenu, ProjectList, ProjectItem, MockupImg } from '../../StyledComponent/StyledComponent';
 
 function Tab() {
     const [index, setindex] = useState(0);

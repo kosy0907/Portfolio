@@ -1,7 +1,7 @@
 import Styled from 'styled-components';
 
 export const TabMenu = Styled.ul`
-    width: 30%;
+    width: 200px;
     padding: 0;
     margin: 0 auto 35px auto;
     list-style: none;
@@ -12,6 +12,7 @@ export const TabMenu = Styled.ul`
     text-transform: uppercase;
 
     & li {
+        transition: all 0.3s ease-in-out;
         display: inline-block;
         padding: 10px 15px 8px 15px;
         font-size: 14px;
@@ -46,5 +47,5 @@ export const ProjectItem = Styled.div`
 `
 
 export const MockupImg = Styled.img`
-    width: 30%;
+    width: 300px;
 `
