@@ -27,6 +27,7 @@ function Navbar() {
                     <Profile>
                         <img src={book} alt='profile' />
                         <h1>Ko Seung Yeon</h1>
+                        <p>seungyeonko98@gmail.com</p>
                         <div className='socialLink'>
                             <a href={gitUrl} target='_blank' className='github' rel="noreferrer"><FontAwesomeIcon icon={faGithub} className='icon' /></a>
                             <a href={blogUrl} target='_blank' className='Tistory' rel="noreferrer"><FontAwesomeIcon icon={faBook} className='icon' /></a>

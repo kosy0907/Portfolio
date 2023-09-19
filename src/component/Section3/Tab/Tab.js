@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { projectItem } from './projectItem';
-import { TabMenu, ProjectList, ProjectItem, MockupImg } from '../../StyledComponent/StyledComponent';
+import { TabMenu, ProjectList } from '../../StyledComponent/StyledComponent';
 
 function Tab() {
     const [index, setindex] = useState(0);
@@ -34,10 +34,9 @@ function Tab() {
                 {projectItem
                     .filter((item) => item.tag[1].type.includes(tabMenu[index].name))
                     .map((item, i) => (
-                        <ProjectItem key={i}>
-                            <MockupImg src={require(`../../../images/mockup/${item.img}.png`)} alt={`${item.img}`} />
-                            <div key={item.title}>{item.title}</div>
-                        </ProjectItem>
+                        <div className='projectItem' key={i}>
+                            <img src={require(`../../../images/mockup/${item.img}.png`)} alt={`${item.img}`} />
+                        </div>
                     ))}
             </ProjectList>
         </>

@@ -10,10 +10,10 @@ function Section1(props) {
 
     return (
         <Home id='home'>
-            <Star />
-            <HomeContainer>
-                <Homeh1>Ko Seung Yeon</Homeh1>
-                <Homep>
+            <div className='star' />
+            <div className='homeContainer'>
+                <h1>Ko Seung Yeon</h1>
+                <p>
                     I love
                     <TypeAnimation
                         sequence={[
@@ -28,11 +28,11 @@ function Section1(props) {
                         speed={50}
                         repeat={Infinity}
                     />
-                </Homep>
-                <ToAboutBtn onClick={toAbout}>
+                </p>
+                <div className='toAboutBtn' onClick={toAbout}>
                     About Me
-                </ToAboutBtn>
-            </HomeContainer>
+                </div>
+            </div>
         </Home>
     );
 }

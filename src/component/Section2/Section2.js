@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect } from 'react';
 import { skillData } from './skillData';
-import './Section2.css';
+import { About } from '../StyledComponent/StyledComponent';
 
 const gitHubUrl = "https://github.com/kosy0907"
 const blogUrl = "https://kosy.tistory.com/"
@@ -28,7 +28,7 @@ function Section2(props, aboutRef) {
     }, []);
 
     return (
-        <div className='about' ref={aboutRef} id='about'>
+        <About className='about' ref={aboutRef} id='about'>
             {/* About Banner */}
             <div className='sectionTitle fadeTarget'>
                 <p>About me</p>
@@ -112,7 +112,7 @@ function Section2(props, aboutRef) {
 
                 </div>
             </div> */}
-        </div>
+        </About>
     );
 }
 
