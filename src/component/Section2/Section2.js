@@ -75,43 +75,6 @@ function Section2(props, aboutRef) {
                     )
                 })}
             </div>
-
-            {/* About personality
-            <div className='aboutPersonality'>
-                <div className='container fadeTarget'>
-                    <ul className='aboutIcon'>
-                        <li>
-                            <div className='gifClock' />
-                            <dl>
-                                <dt>#성실함</dt>
-                                <dd>시간 약속에 늦지 않습니다.</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <div className='gifComplete' />
-                            <dl>
-                                <dt>#꼼꼼함</dt>
-                                <dd>시간을 들여 꼼꼼하게<br />일을 처리합니다.</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <div className='gifBook' />
-                            <dl>
-                                <dt>#도전 정신</dt>
-                                <dd>새로운 것을 배우는 것을<br />두려워하지 않습니다.</dd>
-                            </dl>
-                        </li>
-                        <li>
-                            <div className='gifPen' />
-                            <dl>
-                                <dt>#기록</dt>
-                                <dd>기록하는 습관을 통해<br />해야 할 일을 잊지 않고 챙깁니다.</dd>
-                            </dl>
-                        </li>
-                    </ul>
-
-                </div>
-            </div> */}
         </About>
     );
 }

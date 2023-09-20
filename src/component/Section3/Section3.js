@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect } from 'react';
-import './Section3.css';
 import Tab from './Tab/Tab';
+import { Project } from '../StyledComponent/StyledComponent';
 
 function Section3(props, projectRef) {
 
@@ -25,11 +25,14 @@ function Section3(props, projectRef) {
     }, []);
 
     return (
-        <div className='project' ref={projectRef} id='project'>
-            <div className='wrap'>
+        <Project ref={projectRef} id='project'>
+            <div className='wrap fadeTarget'>
+                <div className='sectionTitle'>
+                    <p>Project</p>
+                </div>
                 <Tab />
             </div>
-        </div>
+        </Project>
     );
 }
 

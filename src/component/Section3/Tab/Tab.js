@@ -35,7 +35,19 @@ function Tab() {
                     .filter((item) => item.tag[1].type.includes(tabMenu[index].name))
                     .map((item, i) => (
                         <div className='projectItem' key={i}>
-                            <img src={require(`../../../images/mockup/${item.img}.png`)} alt={`${item.img}`} />
+                            <div className="itemContainer">
+                                <img src={require(`../../../images/mockup/${item.img}.png`)} alt={`${item.img}`} />
+                                <div className="itemText">
+                                    <h3>{item.title}</h3>
+                                    <div className="itemDesc">
+                                        <p>{item.description}</p>
+                                        <div className='itemLink'>
+                                            <a href={item.link} target='_blank' rel='noreferrer'>Link</a>
+                                            <a href={item.code} target='_blank' rel='noreferrer'>Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     ))}
             </ProjectList>

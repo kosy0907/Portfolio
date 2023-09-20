@@ -69,7 +69,7 @@ export const projectItem = [
         ],
         img: 'wisewash_mockup',
         link: 'https://www.figma.com/file/OB1CaPJJuwq9cKHFLRp1tg/wise-wash?type=design&node-id=0%3A1&mode=design&t=QnY2qkQlzmy6COSb-1',
-        code: '-',
+        code: '#',
         color: '#02422'
     }
 ]

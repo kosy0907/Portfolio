@@ -23,7 +23,7 @@ export const NavbarToggle = Styled.div`
         font-size: 24px;
         transition: all 0.4s;
         outline: none !important;
-        color: #fff;
+        color: rgb(3, 210, 224);
         width: 40px;
         height: 40px;
         line-height: 0;
@@ -33,9 +33,10 @@ export const NavbarToggle = Styled.div`
 
     .active {
         background-color: rgb(3, 210, 224);
+        color: #fff !important;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1380px) {
         display: none!important;
     }
 `
@@ -80,7 +81,7 @@ export const HeaderContainer = Styled.div`
     background: #040b14;
     overflow-y: auto;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1320px) {
         left: -300px;
     }
 `
@@ -288,19 +289,10 @@ export const About = Styled.div`
     background-image: url(${aboutBg});
     background-repeat: no-repeat;
     background-size: cover;
-
-    .sectionTitle {
-        height: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        font-weight: 900;
-        font-size: x-large;
-        font-family: 'Rajdhani', sans-serif;
-        color:#03d2e0;
-      }
+    height: 100vh;
       
     .aboutBanner {
+        padding-top: 6rem 0;
         height: 70%;
         color: #fff;
         font-family: 'Pretendard-Regular', 'sans-serif';
@@ -308,8 +300,7 @@ export const About = Styled.div`
         align-items: flex-start;
 
         #aboutContainer {
-            margin-top: 3rem;
-            padding: 3rem 0;
+            display: flex;
             border-radius: 20px;
             background-color: rgb(45, 31, 118, 0.4);
             justify-content: center;
@@ -336,6 +327,7 @@ export const About = Styled.div`
 
             .bannerContent {
                 .row {
+                    display: flex;
                     p {
                         color: #03d2e0;
                         margin: 0;
@@ -418,12 +410,25 @@ export const About = Styled.div`
 export const Project = Styled.div`
     background-color: #e7e7e7;
     font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+
+    @media screen and (max-width: 767px) {
+        .project {
+          padding-top: 3rem;
+        }
+    }
+
+    .fadeIn {
+        animation-name: fadeIn;
+        animation-duration: 1s;
+    }
 
     .wrap {
-        padding: 7rem 0 0;
         text-align: center;
+        padding-top: 6rem;
     }
 `
+
 export const TabMenu = Styled.ul`
     width: 300px;
     padding: 0;
@@ -464,15 +469,62 @@ export const TabMenu = Styled.ul`
 `;
 
 export const ProjectList = Styled.div`
+    margin-top: -0.75rem;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    width: 60%;
+    margin: -0.75rem auto;
 
     .projectItem {
-        border: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+        padding: 0.75rem;
+        width: 100%;
+
+        .itemContainer {
+            overflow: hidden; 
+            flex: 1 1 0%; 
+            border-radius: 0.5rem;
+            background-color: rgb(255,255,255, 0.3);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+            .itemText {
+                padding: 0.75rem;
+
+                h3 {
+                    font-weight: 600;
+                }
+                .itemDesc {
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+
+                    .itemLink {
+                        a {
+                            text-decoration: none;
+                            color: #000;
+                            font-weight: 900;
+                            font-size: 1.25rem;
+                            margin: 0.75rem;
+
+                            &:hover {
+                                color: rgb(3, 210, 224);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 640px) { 
+            width: 50%; 
+           }
 
         img {
             width: 200px;
         }
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
     }
 `
