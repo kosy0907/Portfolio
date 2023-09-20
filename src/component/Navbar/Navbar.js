@@ -25,7 +25,6 @@ function Navbar() {
             <Header>
                 <HeaderContainer className={menuOpen ? 'header active' : 'header'}>
                     <Profile>
-                        <img src={book} alt='profile' />
                         <h1>Ko Seung Yeon</h1>
                         <p>seungyeonko98@gmail.com</p>
                         <div className='socialLink'>

@@ -88,6 +88,7 @@ export const HeaderContainer = Styled.div`
 
 export const Profile = Styled.div`
     text-align: center;
+    padding: 5rem 0 0;
 
     img {
         margin: 15px auto;
