@@ -362,11 +362,6 @@ export const About = Styled.div`
         }
     }
       
-    .fadeIn {
-        animation-name: fadeIn;
-        animation-duration: 1s;
-    }
-      
     @media screen and (max-width: 1024px) {
         .aboutBanner {
           font-size: 0.8rem;
@@ -417,11 +412,6 @@ export const Project = Styled.div`
         .project {
           padding-top: 3rem;
         }
-    }
-
-    .fadeIn {
-        animation-name: fadeIn;
-        animation-duration: 1s;
     }
 
     .wrap {
@@ -475,6 +465,7 @@ export const ProjectList = Styled.div`
     flex-wrap: wrap;
     width: 60%;
     margin: -0.75rem auto;
+    padding-bottom: 0.75rem;
 
     .projectItem {
         display: flex;

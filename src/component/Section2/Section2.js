@@ -30,11 +30,11 @@ function Section2(props, aboutRef) {
     return (
         <About className='about' ref={aboutRef} id='about'>
             {/* About Banner */}
-            <div className='sectionTitle fadeTarget'>
+            <div className='sectionTitle'>
                 <p>About me</p>
             </div>
-            <div className='aboutBanner'>
-                <div className='container fadeTarget' id='aboutContainer'>
+            <div className='aboutBanner fadeTarget'>
+                <div className='container' id='aboutContainer'>
                     <div className='bannerComment'>
                         <div className='commentText'>
                             <p>KO SEUNG YEON</p>

@@ -30,6 +30,11 @@ ul {
   color:#03d2e0;
 }
 
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

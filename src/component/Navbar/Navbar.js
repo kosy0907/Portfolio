@@ -1,5 +1,4 @@
 import React, { forwardRef, useState } from 'react';
-import book from '../../images/icon/book.gif';
 import { navbarMenu } from './NavbarMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { projectItem } from './projectItem';
 import { TabMenu, ProjectList } from '../../StyledComponent/StyledComponent';
 
@@ -15,6 +15,26 @@ function Tab() {
         setindex(index);
     }
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fadeIn');
+                    } else {
+                        entry.target.classList.remove('fadeIn');
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        const targets = document.querySelectorAll('.fadeTarget');
+        targets.forEach(target => observer.observe(target));
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <>
             <TabMenu>
@@ -30,7 +50,7 @@ function Tab() {
                 })}
             </TabMenu>
 
-            <ProjectList>
+            <ProjectList className='tab fadeTarget'>
                 {projectItem
                     .filter((item) => item.tag[1].type.includes(tabMenu[index].name))
                     .map((item, i) => (
