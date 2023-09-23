@@ -10,6 +10,7 @@ function Section3(props, projectRef) {
                 <div className='sectionTitle'>
                     <p>Project</p>
                 </div>
+                {/* Tab Component */}
                 <Tab />
             </div>
         </Project>

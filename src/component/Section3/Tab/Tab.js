@@ -37,6 +37,7 @@ function Tab() {
 
     return (
         <>
+            {/* Tab menu */}
             <TabMenu>
                 {tabMenu.map((tab, i) => {
                     return (
@@ -50,6 +51,7 @@ function Tab() {
                 })}
             </TabMenu>
 
+            {/* Project */}
             <ProjectList className='tab fadeTarget'>
                 {projectItem
                     .filter((item) => item.tag[1].type.includes(tabMenu[index].name))
