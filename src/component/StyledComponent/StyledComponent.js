@@ -1,6 +1,6 @@
 import Styled, { keyframes } from "styled-components";
 import homeBg from '../../images/background/sec1_sky.jpg';
-import aboutBg from '../../images/background/stars.png'
+import aboutBg from '../../images/background/sec2_stars.png'
 
 // Animation
 export const starMove = keyframes`
