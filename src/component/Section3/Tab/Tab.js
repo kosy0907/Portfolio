@@ -63,6 +63,8 @@ function Tab() {
                                     <h3>{item.title}</h3>
                                     <div className="itemDesc">
                                         <p>{item.description}</p>
+                                        <p>Role: {item.tag[0].role}</p>
+                                        <p># {item.tag[2].pj_category}</p>
                                         <div className='itemLink'>
                                             <a href={item.link} target='_blank' rel='noreferrer'>Link</a>
                                             <a href={item.code} target='_blank' rel='noreferrer'>Code</a>

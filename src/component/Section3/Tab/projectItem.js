@@ -10,8 +10,10 @@ export const projectItem = [
             },
             {
                 type: ['Web', 'All']
+            },
+            {
+                pj_category: 'Team'
             }
-
         ],
         img: 'olook_mockup',
         link: '서비스 중단',
@@ -29,6 +31,9 @@ export const projectItem = [
             },
             {
                 type: ['Web', 'All']
+            },
+            {
+                pj_category: 'Personal'
             }
         ],
         img: 'portfolio_mockup',
@@ -47,6 +52,9 @@ export const projectItem = [
             },
             {
                 type: ['Web', 'All']
+            },
+            {
+                pj_category: 'Personal'
             }
         ],
         img: 'evmap_mockup',
@@ -65,6 +73,9 @@ export const projectItem = [
             },
             {
                 type: ['Design', 'All']
+            },
+            {
+                pj_category: 'Team'
             }
         ],
         img: 'wisewash_mockup',
