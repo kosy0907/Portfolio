@@ -16,7 +16,7 @@ export const projectItem = [
             }
         ],
         img: 'olook_mockup',
-        link: '서비스 중단',
+        link: '#',
         code: 'https://github.com/kosy0907/O-Look',
         color: 'gray'
     },
