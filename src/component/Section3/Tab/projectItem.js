@@ -1,25 +1,25 @@
 export const projectItem = [
-    {
-        id: 1,
-        title: 'O-Look',
-        period: '2021-03 ~ 2021-06',
-        description: '사용자의 선호도를 기반으로 한 패션 아이템 추천사이트입니다.',
-        tag: [
-            {
-                role: 'FrontEnd'
-            },
-            {
-                type: ['Web', 'All']
-            },
-            {
-                pj_category: 'Team'
-            }
-        ],
-        img: 'olook_mockup',
-        link: '#',
-        code: 'https://github.com/kosy0907/O-Look',
-        color: 'gray'
-    },
+    // {
+    //     id: 1,
+    //     title: 'O-Look',
+    //     period: '2021-03 ~ 2021-06',
+    //     description: '사용자의 선호도를 기반으로 한 패션 아이템 추천사이트입니다.',
+    //     tag: [
+    //         {
+    //             role: 'FrontEnd'
+    //         },
+    //         {
+    //             type: ['Web', 'All']
+    //         },
+    //         {
+    //             pj_category: 'Team'
+    //         }
+    //     ],
+    //     img: 'olook_mockup',
+    //     link: '#',
+    //     code: 'https://github.com/kosy0907/O-Look',
+    //     color: 'gray'
+    // },
     {
         id: 2,
         title: 'Portfolio',
