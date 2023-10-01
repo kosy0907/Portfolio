@@ -1,6 +1,6 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation'
-import { Home, HomeContainer, Homep, Homeh1, Star, ToAboutBtn } from '../StyledComponent/StyledComponent';
+import { Home } from '../StyledComponent/StyledComponent';
 
 function Section1(props) {
 

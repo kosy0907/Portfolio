@@ -80,7 +80,28 @@ export const projectItem = [
         ],
         img: 'wisewash_mockup',
         link: 'https://www.figma.com/file/OB1CaPJJuwq9cKHFLRp1tg/wise-wash?type=design&node-id=0%3A1&mode=design&t=QnY2qkQlzmy6COSb-1',
-        code: '#',
+        code: 'https://www.figma.com/file/OB1CaPJJuwq9cKHFLRp1tg/wise-wash?type=design&node-id=0%3A1&mode=design&t=QnY2qkQlzmy6COSb-1',
+        color: '#02422'
+    },
+    {
+        id: 5,
+        title: 'Ucheck-Hour',
+        period: '2022-09 ~ 2022-12',
+        description: '주차장에서 플레이어의 자동차를 탈출시키는 게임, "RushHour"을 유니티로 구현했습니다. U check는 출석 체크 어플로, 지각 체크 전, 플레이어가 제 시간에 도착하는 것을 목표로 합니다.',
+        tag: [
+            {
+                role: 'Design'
+            },
+            {
+                type: ['Design', 'All']
+            },
+            {
+                pj_category: 'Team'
+            }
+        ],
+        img: 'ucheckhour_mockup',
+        link: 'https://github.com/kosy0907/Uckeck-hour',
+        code: 'https://github.com/kosy0907/Uckeck-hour',
         color: '#02422'
     }
 ]
