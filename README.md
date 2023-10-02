@@ -21,14 +21,10 @@
 ## ✔ 기능
 ✅ Custom Cursor
 
-✅ Parallax Scroll
-
-✅ Full Page Scroll
-
 ✅ Responsive web
 
 ## What I learned
-1. useRef를 사용한 Custom Cursor
+### useRef를 사용한 Custom Cursor
     - 커서를 커스텀화하여 구현한 코드입니다. 
     - **useRef**: mainCursorRef와 subCursorRef 초기화
     - **useEffect**: mouseMove event가 발생할 때마다 mainCursorRef와 subCursorRef의 위치를 변경합니다.
@@ -63,46 +59,3 @@
     }
     ```
     <br>
-2. Parallax Scroll 적용 방법
-    - 사용자가 페이지를 스크롤할 때마다 스크롤 위치에 따라 여러 개의 배경 이미지가 움직이는 효과를 구현한 코드입니다.
-    - Scoll 이벤트가 발생할 때마다 스크롤 위치를 업데이트하고, 이를 기반으로 여러 개의 Pixel 배경 이미지의 backgroundPositionY 값을 계산하여 조정합니다.
-    - **useState**: 현재 스크롤 위치를 저장합니다.
-    - **useEffect**: scroll 이벤트를 등록합니다.  
-    <br>
-    
-    ```
-    function Section1(props) {
-        const [position, setPosition] = useState(0);
-        const onScroll = () => {
-            setPosition(window.scrollY);
-        }
-
-        ...
-
-        useEffect(() => {
-            window.addEventListener('scroll', onScroll);
-            return () => {
-                window.removeEventListener('scroll', onScroll);
-            }
-        }, []);
-
-        return (
-            <div className='home2'>
-                <div className='customCircle' />
-                <div className='pixelContainer'>
-                    <div className='intro bg1' style={{ backgroundPositionY: position / 8 }} />
-                    <div className='intro bg2' style={{ backgroundPositionY: position }} />
-                    <div className='intro bg3' style={{ backgroundPositionY: position / 2 }} />
-                    <div className='intro bg4' style={{ backgroundPositionY: position / 2 }} />
-                    <div className='intro bg5' style={{ backgroundPositionY: position / 2 }} />
-                    <div className='intro bg6' style={{ backgroundPositionY: position / 10 }} />
-                </div>
-                <div className='homeContainer'>
-
-                    ...
-                
-                </div>
-            </div>
-        );
-    }
-    ```
