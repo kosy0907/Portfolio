@@ -362,9 +362,8 @@ export const About = Styled.div`
         }
     }
       
-    @media screen and (max-width: 1024px) {
+    @media all and (min-width: 769px) and (max-width: 1024px) {
         .aboutBanner {
-          font-size: 0.8rem;
           
           #aboutContainer {
             padding: 3rem 0.5rem;
@@ -379,7 +378,7 @@ export const About = Styled.div`
               }
     
               .bannerContent {
-                font-size: 0.6rem;
+                font-size: 0.8rem;
     
                 .row {
                     width: 100%;
@@ -398,6 +397,16 @@ export const About = Styled.div`
           p {
             margin: 0.5rem 0;
           }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        #aboutContainer {
+            width: 90% !important;
+
+            .bannerContent {
+                font-size: 0.6rem;
+            }
         }
     }
 `
