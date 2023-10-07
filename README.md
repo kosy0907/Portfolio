@@ -16,7 +16,9 @@
 2023.03.31 ~ 2023.04.10
 
 ## 💻 개발 환경
+- Figma
 - React.js
+- github pages
 
 ## ✔ 기능
 ✅ Custom Cursor
