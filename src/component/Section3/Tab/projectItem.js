@@ -36,7 +36,7 @@ export const projectItem = [
                 pj_category: 'Personal'
             },
             {
-                fcn: ['반응형', 'fade-in 애니메이션', 'React.js']
+                fcn: ['반응형', 'fade-in animation', 'React.js']
             }
         ],
         img: 'portfolio_mockup',
