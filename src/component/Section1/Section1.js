@@ -10,7 +10,6 @@ function Section1(props) {
 
     return (
         <Home id='home'>
-            <div className='star' />
             <div className='homeContainer'>
                 <h1>Ko Seung Yeon</h1>
                 <p>

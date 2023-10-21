@@ -27,13 +27,16 @@ export const projectItem = [
         description: '프로젝트와 소개를 넣은 개인 포트폴리오 웹 사이트 입니다.',
         tag: [
             {
-                role: 'All'
+                role: ['Design', 'FrontEnd', 'Deploy']
             },
             {
                 type: ['Web', 'All']
             },
             {
                 pj_category: 'Personal'
+            },
+            {
+                fcn: ['반응형', 'fade-in 애니메이션', 'React.js']
             }
         ],
         img: 'portfolio_mockup',
@@ -48,13 +51,16 @@ export const projectItem = [
         description: '서울시 내의 지하철역 근처 교통약자용 엘리베이터 위치를 지도에 표시해주는 웹 사이트입니다.',
         tag: [
             {
-                role: 'All'
+                role: ['Design', 'FrontEnd', 'BackEnd', 'Deploy']
             },
             {
                 type: ['Web', 'All']
             },
             {
                 pj_category: 'Personal'
+            },
+            {
+                fcn: ['반응형', 'React.js', 'Node.js']
             }
         ],
         img: 'evmap_mockup',
@@ -69,7 +75,7 @@ export const projectItem = [
         description: '실시간 정보 공유를 중심으로 한 무인 세탁소 정보 공유 앱, "와이즈 워시"의 디자인 입니다.',
         tag: [
             {
-                role: 'Design'
+                role: ['Design']
             },
             {
                 type: ['Design', 'All']
@@ -90,7 +96,7 @@ export const projectItem = [
         description: '주차장에서 플레이어의 자동차를 탈출시키는 게임, "RushHour"을 유니티로 구현했습니다. U check는 출석 체크 어플로, 지각 체크 전, 플레이어가 제 시간에 도착하는 것을 목표로 합니다.',
         tag: [
             {
-                role: 'Design'
+                role: ['Design']
             },
             {
                 type: ['Design', 'All']
