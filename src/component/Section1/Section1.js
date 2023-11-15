@@ -20,7 +20,7 @@ function Section1(props) {
                             1000,
                             ' Recording',
                             1000,
-                            ' Challenge',
+                            ' Challenging',
                             1000
                         ]}
                         wrapper='span'

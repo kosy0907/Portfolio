@@ -3,6 +3,7 @@ import homeBg from '../../images/background/sec1_sky.jpg';
 import aboutBg from '../../images/background/sec2_stars.png'
 
 // Navbar
+// mobile-web navbar Button
 export const NavbarToggle = Styled.div`
     .navToggle {
         position: fixed;
@@ -30,7 +31,7 @@ export const NavbarToggle = Styled.div`
         display: none!important;
     }
 `
-
+// side bar
 export const Header = Styled.div`
     font-family: 'Rajdhani', sans-serif;
 
@@ -79,16 +80,6 @@ export const HeaderContainer = Styled.div`
 export const Profile = Styled.div`
     text-align: center;
     padding: 5rem 0 0;
-
-    img {
-        margin: 15px auto;
-        display: block;
-        width: 120px;
-        border: 8px solid #2c2f3f;
-        border-radius: 50% !important;
-        max-width: 100%;
-        height: auto;
-    }
 
     .socialLink {
         text-align: center;
