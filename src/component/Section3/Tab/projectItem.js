@@ -13,6 +13,9 @@ export const projectItem = [
             },
             {
                 pj_category: 'Team'
+            },
+            {
+                fcn: ['Pug', 'Node.js']
             }
         ],
         img: 'olook_mockup',
@@ -82,6 +85,9 @@ export const projectItem = [
             },
             {
                 pj_category: 'Team'
+            },
+            {
+                fcn: ['Figma']
             }
         ],
         img: 'wisewash_mockup',
