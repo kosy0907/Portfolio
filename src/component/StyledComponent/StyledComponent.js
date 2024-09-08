@@ -465,7 +465,7 @@ export const ProjectList = Styled.div`
                             text-decoration: none;
                             color: #000;
                             font-weight: 900;
-                            font-size: 1.25rem;
+                            font-size: 1rem;
                             margin: 0.75rem;
 
                             &:hover {
