@@ -1,25 +1,25 @@
 export const projectItem = [
-    // {
-    //     id: 1,
-    //     title: 'O-Look',
-    //     period: '2021-03 ~ 2021-06',
-    //     description: '사용자의 선호도를 기반으로 한 패션 아이템 추천사이트입니다.',
-    //     tag: [
-    //         {
-    //             role: 'FrontEnd'
-    //         },
-    //         {
-    //             type: ['Web', 'All']
-    //         },
-    //         {
-    //             pj_category: 'Team'
-    //         }
-    //     ],
-    //     img: 'olook_mockup',
-    //     link: '#',
-    //     code: 'https://github.com/kosy0907/O-Look',
-    //     color: 'gray'
-    // },
+    {
+        id: 1,
+        title: 'O-Look',
+        period: '2021-03 ~ 2021-06',
+        description: '사용자의 선호도를 기반으로 한 패션 아이템 추천사이트입니다.',
+        tag: [
+            {
+                role: ['FrontEnd']
+            },
+            {
+                type: ['Web', 'All']
+            },
+            {
+                pj_category: 'Team'
+            }
+        ],
+        img: 'olook_mockup',
+        link: '',
+        code: 'https://github.com/kosy0907/O-Look',
+        color: 'gray'
+    },
     {
         id: 2,
         title: 'Portfolio',
@@ -86,7 +86,6 @@ export const projectItem = [
         ],
         img: 'wisewash_mockup',
         link: 'https://www.figma.com/file/OB1CaPJJuwq9cKHFLRp1tg/wise-wash?type=design&node-id=0%3A1&mode=design&t=QnY2qkQlzmy6COSb-1',
-        code: 'https://www.figma.com/file/OB1CaPJJuwq9cKHFLRp1tg/wise-wash?type=design&node-id=0%3A1&mode=design&t=QnY2qkQlzmy6COSb-1',
         color: '#02422'
     },
     {
@@ -103,11 +102,83 @@ export const projectItem = [
             },
             {
                 pj_category: 'Team'
+            },
+            {
+                fcn: ['Unity']
             }
         ],
         img: 'ucheckhour_mockup',
-        link: 'https://github.com/kosy0907/Uckeck-hour',
+        link: '',
         code: 'https://github.com/kosy0907/Uckeck-hour',
         color: '#02422'
-    }
+    },
+    // {
+    //     id: 6,
+    //     title: 'OLook TestCase',
+    //     period: '2021-03 ~ 2021-06',
+    //     description: '팀 프로젝트로 진행한 패션 아이템 추천 사이트의 테스트 케이스입니다.',
+    //     tag: [
+    //         {
+    //             role: ['All']
+    //         },
+    //         {
+    //             type: ['Test Case', 'All']
+    //         },
+    //         {
+    //             pj_category: 'Team'
+    //         },
+    //         {
+    //             fcn: ['Excel']
+    //         }
+    //     ],
+    //     img: 'olook_tc',
+    //     link: 'blank',
+    //     code: '',
+    // },
+    // {
+    //     id: 7,
+    //     title: 'Portfolio TestCase',
+    //     period: '2023-03-31 ~ 2023-04-10',
+    //     description: '개인 포트폴리오 웹 사이트의 테스트 케이스입니다.',
+    //     tag: [
+    //         {
+    //             role: ['All']
+    //         },
+    //         {
+    //             type: ['Test Case', 'All']
+    //         },
+    //         {
+    //             pj_category: 'Personal'
+    //         },
+    //         {
+    //             fcn: ['Excel']
+    //         }
+    //     ],
+    //     img: 'olook_tc',
+    //     link: 'blank',
+    //     code: '',
+    // },
+    // {
+    //     id: 8,
+    //     title: 'EV-map TestCase',
+    //     period: '2023-03-31 ~ 2023-04-10',
+    //     description: 'EV-map 사이트의 테스트 케이스입니다.',
+    //     tag: [
+    //         {
+    //             role: ['All']
+    //         },
+    //         {
+    //             type: ['Test Case', 'All']
+    //         },
+    //         {
+    //             pj_category: 'Personal'
+    //         },
+    //         {
+    //             fcn: ['Excel']
+    //         }
+    //     ],
+    //     img: 'olook_tc',
+    //     link: 'blank',
+    //     code: '',
+    // },
 ]

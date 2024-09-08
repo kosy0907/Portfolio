@@ -8,7 +8,8 @@ function Tab() {
     const tabMenu = [
         { name: 'All' },
         { name: 'Web' },
-        { name: 'Design' }
+        { name: 'Design' },
+        // { name: 'Test Case' }
     ]
 
     const selectTab = (index) => {
@@ -58,7 +59,7 @@ function Tab() {
                     .map((item, i) => (
                         <div className='projectItem' key={i}>
                             <div className="itemContainer">
-                                <img src={require(`../../../images/mockup/${item.img}.png`)} alt={`${item.img}`} />
+                                <img src={require(`../../../images/project/${item.img}.png`)} alt={`${item.img}`} />
                                 <div className="itemText">
                                     <h3>{item.title}</h3>
                                     <div className="itemDesc">
@@ -67,10 +68,24 @@ function Tab() {
                                         {item.tag[3] ? (
                                             <p>#{item.tag[3].fcn.join(' #')}</p>
                                         ) : null}
-                                        <div className='itemLink'>
-                                            <a href={item.link} target='_blank' rel='noreferrer'>Link</a>
-                                            <a href={item.code} target='_blank' rel='noreferrer'>Code</a>
-                                        </div>
+                                        {item.link && item.code ? (
+                                            <div className='itemLink'>
+                                                <a href={item.link} target='_blank' rel='noreferrer'>Link</a>
+                                                <a href={item.code} target='_blank' rel='noreferrer'>Code</a>
+                                            </div>
+                                        ) :
+                                            item.link ? (
+                                                <div className='itemLink'>
+                                                    <a href={item.link} target='_blank' rel='noreferrer'>Link</a>
+                                                </div>
+                                            ) : (
+                                                item.code ? (
+                                                    <div className='itemLink'>
+                                                        <a href={item.code} target='_blank' rel='noreferrer'>Code</a>
+                                                    </div>
+                                                ) : ''
+                                            )
+                                        }
                                     </div>
                                 </div>
                             </div>

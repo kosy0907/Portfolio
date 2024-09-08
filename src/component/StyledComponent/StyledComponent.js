@@ -372,7 +372,7 @@ export const About = Styled.section`
 
 // Section3
 export const Project = Styled.section`
-    background-color: #e7e7e7;
+    background-color: #F5F5F5;
     font-family: 'Rajdhani', sans-serif;
     min-height: 100vh;
 
@@ -395,10 +395,10 @@ export const TabMenu = Styled.ul`
     list-style: none;
     text-align: center;
     background: #fff;
+    border: 2px solid #0abdc9; 
     border-radius: 50px;
     padding: 2px 15px;
     text-transform: uppercase;
-    display: flex;
 
     & li {
         flex: 1;
@@ -409,21 +409,23 @@ export const TabMenu = Styled.ul`
         font-weight: 800;
         line-height: 1;
         text-transform: uppercase;
-        color: #272829;
+        color: #03d2e0;
 
         &:hover {
-            color: #149ddd;
+        background-color: #0abdc9;
+        color: #fff;
         }
     }
 
     .tab {
         width:100% auto;
         padding: 15px 10px;
+        border-radius: 10px
     }
 
     .focused {
-         background-color: rgb(209, 209, 209);
-         color: #149ddd;
+         background-color: #0abdc9;
+         color: #fff;
     }
 `;
 
@@ -445,7 +447,7 @@ export const ProjectList = Styled.div`
             overflow: hidden; 
             flex: 1 1 0%; 
             border-radius: 0.5rem;
-            background-color: rgb(255,255,255, 0.3);
+            background-color: rgb(255,255,255);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
             .itemText {

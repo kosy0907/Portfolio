@@ -18,9 +18,9 @@ function Section1(props) {
                         sequence={[
                             ' Web Develop',
                             1000,
-                            ' Recording',
+                            ' Testing',
                             1000,
-                            ' Challenging',
+                            ' Recording',
                             1000
                         ]}
                         wrapper='span'
