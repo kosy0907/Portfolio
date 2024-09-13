@@ -5,6 +5,7 @@ import { Home } from '../StyledComponent/StyledComponent';
 function Section1(props) {
 
     const toAbout = () => {
+        props.setScrollIndex(2);
         props.aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
 

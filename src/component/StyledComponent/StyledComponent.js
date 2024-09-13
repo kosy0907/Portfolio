@@ -27,7 +27,7 @@ export const NavbarToggle = Styled.div`
         color: #fff !important;
     }
 
-    @media (min-width: 1380px) {
+    @media (min-width: 1480px) {
         display: none!important;
     }
 `
@@ -72,7 +72,7 @@ export const HeaderContainer = Styled.div`
     background: #040b14;
     overflow-y: auto;
 
-    @media (max-width: 1320px) {
+    @media (max-width: 1480px) {
         left: -300px;
     }
 `

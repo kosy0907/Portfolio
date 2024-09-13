@@ -114,7 +114,8 @@ export const projectItem = [
     //         }
     //     ],
     //     img: 'olook_tc',
-    //     link: 'blank',
+    //     fileName: 'olook_tc.xlsx',
+    //     link: '/TCFile/olook_tc.xlsx',
     //     code: '',
     // },
     // {

@@ -53,7 +53,7 @@ function App() {
       <Navbar navState={navState} aboutRef={aboutRef} projectRef={projectRef} />
       <div className='section'>
         <Dots scrollIndex={scrollIndex} />
-        <Section1 aboutRef={aboutRef} />
+        <Section1 aboutRef={aboutRef} setScrollIndex={setScrollIndex} />
         <Section2 ref={aboutRef} />
         <Section3 ref={projectRef} />
       </div>
