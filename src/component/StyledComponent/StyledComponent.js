@@ -540,7 +540,7 @@ export const ProjectTitle = styled.h2`
 `;
 
 export const GridContainer = styled.div`
-    display: grid;
+    display: grid; 
     grid-template-columns: auto auto auto;
     gap: 20px;
     width: 900px;
