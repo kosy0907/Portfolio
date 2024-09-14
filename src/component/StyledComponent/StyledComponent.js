@@ -28,7 +28,7 @@ export const NavbarToggle = styled.div`
         position: fixed;
         left: 15px;
         top: 15px;
-        z-index: 9998;
+        z-index: 1001;
         border: 0;
         font-size: 24px;
         transition: all 0.4s;
@@ -59,7 +59,7 @@ export const Navigation = styled.nav`
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 10px 20px;
-    z-index: 999; 
+    z-index: 1000; 
     width: 100vw;
 
     ul {
@@ -328,8 +328,8 @@ export const ToAboutBtn = styled.button`
 export const IntroFooter = styled.footer`
     bottom: 0;
     padding-bottom: 30px;
-    color: #fcdcbc;
-    font-size: 1rem;
+    color: rgb(252, 220, 188, 0.3);
+    font-size: 0.75rem;
 `;
 
 // Section2
@@ -378,8 +378,8 @@ export const Contact = styled.div`
 export const Footer = styled.div`
     width: 100vw;
     height: 30vh;
-    background-color: #c2d1be;
-    color: #F08080;
+    background-color: #000;
+    color: #d9c3c3;
     display: flex;
     flex-direction: column;
     justify-content: center;
