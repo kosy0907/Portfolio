@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { Navigation, NavbarToggle } from '../StyledComponent/StyledComponent'
-import { navbarMenu } from './NavbarMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-function Navbar() {
+function Navbar({ navbarMenu }) {
+
+    const scrollToSection = (ref) => {
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -19,10 +23,13 @@ function Navbar() {
 
             <Navigation className={menuOpen ? 'active' : ''}>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    {navbarMenu.map((menu, id) => (
+                        <li key={id} onClick={() => scrollToSection(menu.ref)}>
+                            <a href={menu.link}>
+                                <span>{menu.name}</span>
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </Navigation>
         </>

@@ -1,6 +1,10 @@
-import React from 'react';
-import { Intro } from '../StyledComponent/StyledComponent';
+import React, { forwardRef } from 'react';
+import { Project } from '../StyledComponent/StyledComponent';
 
-export const Section3 = () => {
-
+function Section3(props, section3Ref) {
+    return (
+        <Project ref={section3Ref} />
+    );
 }
+
+export default forwardRef(Section3);

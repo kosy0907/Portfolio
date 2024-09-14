@@ -1,5 +1,27 @@
 import styled, { keyframes } from "styled-components";
 
+// Animation
+const fadeIn = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`;
+
+const fadeInOut = keyframes`
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+`;
+
 // Navbar
 export const NavbarToggle = styled.div`
     .navToggle {
@@ -11,16 +33,16 @@ export const NavbarToggle = styled.div`
         font-size: 24px;
         transition: all 0.4s;
         outline: none !important;
-        color: #94a8a8;
+        color: #F08080;
         width: 40px;
         height: 40px;
         line-height: 0;
-        border-radius: 50px;
+        border-radius: 5px;
         cursor: pointer;
     }
 
     .active {
-        background-color: #94a8a8;
+        background-color: #F08080;
         color: #fff !important;
     }
 
@@ -34,7 +56,7 @@ export const Navigation = styled.nav`
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 10px 20px;
     z-index: 999; 
@@ -49,12 +71,12 @@ export const Navigation = styled.nav`
 
         li {
             a {
-                color: #fff; // 링크 색상
+                color: #fff;
                 text-decoration: none;
                 transition: color 0.3s;
 
                 &:hover {
-                    color: rgb(3, 210, 224); // 호버 색상
+                    color: #F08080;
                 }
             }
         }
@@ -65,9 +87,9 @@ export const Navigation = styled.nav`
 
     @media (max-width: 1080px) {
         ul {
-            flex-direction: column; // 세로로 배치
-            align-items: center; // 중앙 정렬
-            padding: 10px 0; // 세로 메뉴의 패딩 조정
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
         }
 
         padding: 10px 0;
@@ -100,22 +122,33 @@ export const MainContent = styled.main`
 `;
 
 export const Title = styled.h1`
-    font-size: 4rem;
+    font-size: 6rem;
     letter-spacing: 5px;
     margin: 0;
-    color: #94a8a8;
+    color: #F08080;
+    z-index: 999;
+    animation: ${fadeIn} 1.5s ease-in; 
+
+    @media(max-width: 1080px) {
+        font-size: 3rem;
+    }
 `;
 
 export const Ellipse = styled.div`
-    width: 600px;
-    height: 300px;
+    width: 1050px;
+    height: 400px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     position: absolute;
     top: 50%; // 화면의 중앙에 위치
     left: 50%; // 화면의 중앙에 위치
     transform: translate(-50%, -50%);
-    animation: spin 10s ease-in-out infinite;
+    animation: spin 13s ease-in-out infinite;
+
+    @media(max-width: 1080px) {
+        width: 700px;
+        height: 300px;
+    }
     
     @keyframes spin {
         0% {
@@ -131,46 +164,57 @@ export const Ellipse = styled.div`
 `;
 
 export const Ellipse2 = styled.div`
-    width: 600px;
-    height: 300px;
+    width: 1050px;
+    height: 400px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     position: absolute;
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);
     animation: spin2 10s ease-in-out infinite;
+
+    @media(max-width: 1080px) {
+        width: 700px;
+        height: 300px;
+    }
     
     @keyframes spin2 {
         0% {
-            transform: translate(-50%, -50%) rotate(-10deg);
+            transform: translate(-50%, -50%) rotate(-20deg);
         }
         50% {
-            transform: translate(-50%, -50%) rotate(-10deg);
+            transform: translate(-50%, -50%) rotate(10deg);
         }   
         100% {
-            transform: translate(-50%, -50%) rotate(-10deg);
+            transform: translate(-50%, -50%) rotate(-20deg);
         }
     }
 `
 
 export const Ellipse3 = styled.div`
-    width: 600px;
-    height: 300px;
+    width: 1050px;
+    height: 400px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     position: absolute;
+    z-index: 1;
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%);
     animation: spin3 10s ease-in-out infinite;
+
+    @media(max-width: 1080px) {
+        width: 700px;
+        height: 300px;
+    }
     
     @keyframes spin3 {
         0% {
             transform: translate(-50%, -50%) rotate(-40deg);
         }
         50% {
-            transform: translate(-50%, -50%) rotate(-40deg);
+            transform: translate(-50%, -50%) rotate(0deg);
         }   
         100% {
             transform: translate(-50%, -50%) rotate(-40deg);
@@ -178,10 +222,143 @@ export const Ellipse3 = styled.div`
     }
 `
 
-export const Footer = styled.footer`
-    padding-bottom: 20px;
-    color: #94a8a8;
+export const Cross = styled.div`
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: ${fadeInOut} 5s ease-in-out infinite;
+
+    /* 세로 선 */
+    & .vertical {
+        position: absolute;
+        width: 1px;
+        height: 300px;
+        background-color: #c7b658;
+        background-image: linear-gradient(#000, #c7b658, #000);
+        top: -150px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* 가로 선 */
+    & .horizontal {
+        position: absolute;
+        width: 200px;
+        height: 1px;
+        background-color: #c7b658;
+        background-image: linear-gradient(#000, #c7b658, #000);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+`;
+
+export const Cross2 = styled.div`
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 1;
+    animation: ${fadeInOut} 7s ease-in-out infinite;
+
+    /* 세로 선 */
+    & .vertical {
+        position: absolute;
+        width: 1px;
+        height: 150px;
+        background-color: #94a8a8;
+        background-image: linear-gradient(#000, #94a8a8, #000);
+        top: -75px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* 가로 선 */
+    & .horizontal {
+        position: absolute;
+        width: 150px;
+        height: 1px;
+        background-color: #94a8a8;
+        background-image: linear-gradient(#000, #94a8a8, #000);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+`
+
+export const HalfMoon = styled.div`
+    width: 100px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 0 0 100px 100px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+`;
+
+export const HalfMoonBorder = styled.div`
+    width: 100px;
+    height: 50px;
+    border: 5px solid rgba(240, 128, 128, 0.7);
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    z-index: 200;
+`
+
+export const IntroFooter = styled.footer`
+    bottom: 0;
+    padding-bottom: 30px;
+    color: #fcdcbc;
     font-size: 1rem;
 `;
 
 // Section2
+export const About = styled.div`
+    width: 100vw;
+    height: 50vh;
+    background-color: #c4b55e;
+    padding: 40px 0;
+
+    h1, p {
+        margin: 0;
+    }
+
+    a {
+        svg {
+            color: #000;
+
+            &:hover {
+                color: #fcdcbc;
+                }
+            }
+        }
+`
+
+export const Skill = styled.div`
+    width: 100vw;
+    height: 50vh;
+    background-color: #e2eae7;
+`
+
+// Section3
+export const Project = styled.div`
+    width: 100vw;
+    height: 100vh;
+    background-color: #5ec4a4;
+`
+
+// Section4
+export const Contact = styled.div`
+    width: 100vw;
+    height: 100vh;
+    background-color: #c4655e;
+`
