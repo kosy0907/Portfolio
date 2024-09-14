@@ -8,7 +8,7 @@ const fadeIn = keyframes`
     100% {
         opacity: 1;
     }
-`;
+`
 
 const fadeInOut = keyframes`
     0% {
@@ -19,6 +19,18 @@ const fadeInOut = keyframes`
     }
     100% {
         opacity: 0.5;
+    }
+`
+
+const bounce = keyframes`
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-5px) translateX(-50%);
     }
 `;
 
@@ -60,7 +72,7 @@ export const Navigation = styled.nav`
     color: #fff;
     padding: 10px 20px;
     z-index: 1000; 
-    width: 100vw;
+    max-width: 100vw;
 
     ul {
         list-style: none;
@@ -103,7 +115,7 @@ export const Intro = styled.div`
     font-family: 'Arial', sans-serif;
     color: #94a8a8;
     background-color: #000;
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -145,9 +157,19 @@ export const Ellipse = styled.div`
     transform: translate(-50%, -50%);
     animation: spin 13s ease-in-out infinite;
 
-    @media(max-width: 1080px) {
+    @media (max-width: 1200px) {
         width: 700px;
         height: 300px;
+    }
+
+    @media (max-width: 768px) {
+        width: 300px;
+        height: 150px;
+    }
+    
+    @media (max-width: 380px) {
+        width: 180px;
+        height: 80px;
     }
     
     @keyframes spin {
@@ -174,11 +196,21 @@ export const Ellipse2 = styled.div`
     transform: translate(-50%, -50%);
     animation: spin2 10s ease-in-out infinite;
 
-    @media(max-width: 1080px) {
+    @media (max-width: 1200px) {
         width: 700px;
         height: 300px;
     }
+
+    @media (max-width: 768px) {
+        width: 300px;
+        height: 150px;
+    }
     
+    @media (max-width: 380px) {
+        width: 180px;
+        height: 80px;
+    }
+
     @keyframes spin2 {
         0% {
             transform: translate(-50%, -50%) rotate(-20deg);
@@ -204,9 +236,19 @@ export const Ellipse3 = styled.div`
     transform: translate(-50%, -50%);
     animation: spin3 10s ease-in-out infinite;
 
-    @media(max-width: 1080px) {
+    @media (max-width: 1200px) {
         width: 700px;
         height: 300px;
+    }
+
+    @media (max-width: 768px) {
+        width: 300px;
+        height: 150px;
+    }
+
+    @media (max-width: 380px) {
+        width: 180px;
+        height: 80px;
     }
     
     @keyframes spin3 {
@@ -226,11 +268,10 @@ export const Cross = styled.div`
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    
     z-index: 1;
     animation: ${fadeInOut} 5s ease-in-out infinite;
 
-    /* 세로 선 */
     & .vertical {
         position: absolute;
         width: 1px;
@@ -242,7 +283,6 @@ export const Cross = styled.div`
         transform: translateX(-50%);
     }
 
-    /* 가로 선 */
     & .horizontal {
         position: absolute;
         width: 200px;
@@ -300,6 +340,7 @@ export const HalfMoon = styled.div`
     transform: translate(-50%, -50%) rotate(90deg);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 100;
+    animation: ${fadeIn} 0.25s ease-in-out;
 `;
 
 export const HalfMoonBorder = styled.div`
@@ -312,6 +353,7 @@ export const HalfMoonBorder = styled.div`
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
     z-index: 200;
+    animation: ${fadeIn} 0.5s ease-in;
 `
 
 export const ToAboutBtn = styled.button`
@@ -322,7 +364,7 @@ export const ToAboutBtn = styled.button`
     background: transparent;
     border: none;
     cursor: pointer;
-    zIndex: 1000;
+    animation: ${bounce} 2s infinite;
 `
 
 export const IntroFooter = styled.footer`
@@ -334,14 +376,14 @@ export const IntroFooter = styled.footer`
 
 // Section2
 export const About = styled.div`
-    width: 100vw;
-    height: 50vh;
-    background-color: #c4b55e;
-    padding: 40px 0;
-
-    h1, p {
-        margin: 0;
-    }
+    max-width: 100vw;
+    background-color: #b07272;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
 
     a {
         svg {
@@ -351,32 +393,225 @@ export const About = styled.div`
                 color: #fcdcbc;
                 }
             }
-        }
+    }
+
+    @media (max-width: 1200px) {
+        align-items: center;
+    }
 `
 
-export const Skill = styled.div`
-    width: 100vw;
-    height: 50vh;
-    background-color: #e2eae7;
+export const AboutEllipse = styled(Ellipse)`
+    width: 400px;
+    height: 200px;
+    top: 25%;
+    left: 10%;
+    animation: none;
+    transform: rotate(35deg);
+
+    @media (max-width: 1200px) {
+        width: 700px;
+        height: 350px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(35deg);
+    }
 `
+
+export const AboutEllipse2 = styled(Ellipse)`
+    width: 400px;
+    height: 200px;
+    top: 25%;
+    left: 60%;
+    animation: none;
+    transform: rotate(35deg);
+
+    @media (max-width: 1200px) {
+        width: 700px;
+        height: 350px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(20deg);
+    }
+`
+
+export const Introduction = styled.section`
+    padding: 50px;
+    width: 40%;
+
+    h2 {
+        font-size: 2rem;
+    }
+        
+    p {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    
+    @media (max-width: 500px) {
+        padding: 50px 20px 0;
+
+        p {
+            font-size: 1rem;
+        }
+    }
+`
+
+export const Certificate = styled.section`
+    width: 40%;
+    padding: 50px;
+    font-weight: 300;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+        border: none;
+        font-size: 1.2rem;
+
+        @media (max-width: 500px) {
+            font-size: 0.8rem;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid rgb(0, 0, 0, 0.15);
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding: 20px;
+    }
+
+    @media (max-width: 500px) {
+        padding: 5px 20px;
+    }
+`;
+
+export const Connect = styled.section`
+    margin-top: 20px;
+
+    h2 {
+        font-size: 20px;
+    }
+
+    a {
+        color: #007bff; /* 링크 색상 */
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+`;
+
+
 
 // Section3
 export const Project = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background-color: #5ec4a4;
+    max-width: 100vw;
+    background-color: #f9f9f9; /* 배경 색상 설정 */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
 `
+
+export const ProjectTitle = styled.h2`
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 30px;
+`;
+
+export const GridContainer = styled.div`
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    width: 900px;
+    height: 500px
+`
+
+export const ProjectItemContainer = styled.div`
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+`;
+
+export const ProjectImage = styled.img`
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+`;
+
 
 // Section4
 export const Contact = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background-color: #c4655e;
+    max-width: 100vw;
+    background-color: #fff;
+    padding: 40px 30px;
+    margin: 0 auto;
+    
+    @media (max-width: 600px) {
+        padding: 20px;
+    }
 `
+
+export const ContactTitle = styled.h1`
+    color: #F08080;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px 50px;;
+`
+
+export const ContactSubtitle = styled.p`
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 0 50px;;
+`
+
+export const LinksContainer = styled.div`
+    margin-top: 20px;
+    padding: 20px 50px;
+
+    a {
+        display: block;
+        font-size: 16px;
+        margin: 5px 0;
+        color: #333;
+        text-decoration: none;
+        width: 10%;
+        
+        &:hover {
+            text-decoration: underline;
+            color: #F08080;
+        }
+    }
+`
+
+
 
 // Footer
 export const Footer = styled.div`
-    width: 100vw;
+    max-width: 100vw;
     height: 30vh;
     background-color: #000;
     color: #d9c3c3;
@@ -409,6 +644,12 @@ export const Footer = styled.div`
             }
         }
     }
+
+    @media (max-width: 500px) {
+        p {
+        font-size: 10px;
+        }
+    } 
 `
 
 export const FooterCross = styled(Cross)`
