@@ -314,6 +314,17 @@ export const HalfMoonBorder = styled.div`
     z-index: 200;
 `
 
+export const ToAboutBtn = styled.button`
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    zIndex: 1000;
+`
+
 export const IntroFooter = styled.footer`
     bottom: 0;
     padding-bottom: 30px;
@@ -361,4 +372,67 @@ export const Contact = styled.div`
     width: 100vw;
     height: 100vh;
     background-color: #c4655e;
+`
+
+// Footer
+export const Footer = styled.div`
+    width: 100vw;
+    height: 30vh;
+    background-color: #c2d1be;
+    color: #F08080;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+
+    p {
+        position: absolute;
+        font-size: 14px;
+        bottom: 0
+    }
+
+    .socialLink {
+        position: absolute;
+        bottom: 20%;
+
+        .snsIcon {
+            margin: 10px 20px;
+
+            svg {
+                color: #fff; /* 기본 색상 */
+            }
+
+            &:hover svg {
+                color: #F08080; /* hover 시 색상 변경 */
+            }
+        }
+    }
+`
+
+export const FooterCross = styled(Cross)`
+    & .vertical {
+        height: 80px;
+        top: -40px;
+        background-image: linear-gradient(#fff, #c7b658, #fff);
+    }
+
+    & .horizontal {
+        width: 60px;
+        background-image: linear-gradient(#fff, #c7b658, #fff);
+    }
+`
+
+export const FooterCross2 = styled(Cross2)`
+    & .vertical {
+        height: 60px;
+        top: -30px;
+        background-image: linear-gradient(#fff, #94a8a8, #fff);
+    }
+
+    & .horizontal {
+        width: 60px;
+        background-image: linear-gradient(#fff, #94a8a8, #fff);
+    }
 `

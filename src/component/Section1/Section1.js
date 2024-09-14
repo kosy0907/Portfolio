@@ -12,7 +12,8 @@ import {
     HalfMoon,
     HalfMoonBorder,
     IntroFooter,
-    Cross2
+    Cross2,
+    ToAboutBtn
 } from '../StyledComponent/StyledComponent';
 
 function Section1(props, section1Ref) {
@@ -30,8 +31,6 @@ function Section1(props, section1Ref) {
                 <Cross>
                     <div className="vertical" />
                     <div className="horizontal" />
-                    <div className="vertical-rotated" /> {/* 두 번째 세로 선 (회전된) */}
-                    <div className="horizontal-rotated" /> {/* 두 번째 가로 선 (회전된) */}
                 </Cross>
                 <Cross2>
                     <div className="vertical" />
@@ -43,18 +42,10 @@ function Section1(props, section1Ref) {
                 <Ellipse />
                 <Ellipse2 />
                 <Ellipse3 />
-                <button onClick={scrollToSection2} style={{
-                    position: 'absolute',
-                    bottom: '20px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    background: 'transparent',
-                    border: 'none',
-                    cursor: 'pointer',
-                    zIndex: 1000
-                }}>
-                    <FontAwesomeIcon icon={faAngleDoubleDown} size="2x" color="#F08080" />
-                </button>
+
+                <ToAboutBtn onClick={scrollToSection2}>
+                    <FontAwesomeIcon icon={faAngleDoubleDown} size='2x' color='#F08080' />
+                </ToAboutBtn>
             </MainContent>
 
             <IntroFooter>
