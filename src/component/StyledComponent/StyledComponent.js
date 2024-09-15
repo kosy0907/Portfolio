@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 // Animation
 const fadeIn = keyframes`
@@ -32,7 +32,46 @@ const bounce = keyframes`
     60% {
         transform: translateY(-5px) translateX(-50%);
     }
+`
+
+export const slideInLeft = keyframes`
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 `;
+
+// 재사용 컴포넌트
+const StyledEllipse = styled.div`
+    width: 1050px;
+    height: 400px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ${({ animation }) => animation} 10s ease-in-out infinite;
+
+    @media (max-width: 1200px) {
+        width: 700px;
+        height: 300px;
+    }
+
+    @media (max-width: 768px) {
+        width: 300px;
+        height: 150px;
+    }
+
+    @media (max-width: 380px) {
+        width: 180px;
+        height: 80px;
+    }
+`
 
 // Navbar
 export const NavbarToggle = styled.div`
@@ -73,6 +112,7 @@ export const Navigation = styled.nav`
     padding: 10px 20px;
     z-index: 1000; 
     max-width: 100vw;
+    font-size: 1.25rem;
 
     ul {
         list-style: none;
@@ -98,15 +138,20 @@ export const Navigation = styled.nav`
     }
 
     @media (max-width: 1080px) {
+        font-size: 1rem;
+        padding: 10px 0;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out;
+
         ul {
             flex-direction: column;
             align-items: center;
             padding: 10px 0;
-        }
 
-        padding: 10px 0;
-        transform: translateY(-100%);
-        transition: transform 0.5s ease-in-out;
+            li {
+                margin: 5px 0;
+            }
+        }
     }
 `
 
@@ -122,7 +167,8 @@ export const Intro = styled.div`
     justify-content: space-between;
     align-items: center;
     text-align: center;
-`;
+    overflow: hidden;
+`
 
 export const MainContent = styled.main`
     position: relative;
@@ -140,127 +186,57 @@ export const Title = styled.h1`
     color: #F08080;
     z-index: 999;
     animation: ${fadeIn} 1.5s ease-in; 
+    font-weight: 900;
 
     @media(max-width: 1080px) {
         font-size: 3rem;
     }
-`;
+`
 
-export const Ellipse = styled.div`
-    width: 1050px;
-    height: 400px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    position: absolute;
-    top: 50%; // 화면의 중앙에 위치
-    left: 50%; // 화면의 중앙에 위치
-    transform: translate(-50%, -50%);
-    animation: spin 13s ease-in-out infinite;
+export const SubTitle = styled.div`
+    width: 65%;
+    border-radius: 50px;
+    background-color: #F08080;
+    color: #000;
+    font-size: 4rem;
+    font-weight: 900;
+    margin-top: 10px;
+    z-index:999;
+    animation: ${fadeIn} 1.5s ease-in; 
 
-    @media (max-width: 1200px) {
-        width: 700px;
-        height: 300px;
-    }
-
-    @media (max-width: 768px) {
-        width: 300px;
-        height: 150px;
-    }
-    
-    @media (max-width: 380px) {
-        width: 180px;
-        height: 80px;
-    }
-    
-    @keyframes spin {
-        0% {
-            transform: translate(-50%, -50%) rotate(10deg);
-        }
-        50% {
-            transform: translate(-50%, -50%) rotate(30deg);
-        }   
-        100% {
-            transform: translate(-50%, -50%) rotate(10deg);
-        }
-    }
-`;
-
-export const Ellipse2 = styled.div`
-    width: 1050px;
-    height: 400px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: spin2 10s ease-in-out infinite;
-
-    @media (max-width: 1200px) {
-        width: 700px;
-        height: 300px;
-    }
-
-    @media (max-width: 768px) {
-        width: 300px;
-        height: 150px;
-    }
-    
-    @media (max-width: 380px) {
-        width: 180px;
-        height: 80px;
-    }
-
-    @keyframes spin2 {
-        0% {
-            transform: translate(-50%, -50%) rotate(-20deg);
-        }
-        50% {
-            transform: translate(-50%, -50%) rotate(10deg);
-        }   
-        100% {
-            transform: translate(-50%, -50%) rotate(-20deg);
-        }
+    @media(max-width: 1080px) {
+        font-size: 2rem;
     }
 `
 
-export const Ellipse3 = styled.div`
-    width: 1050px;
-    height: 400px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    position: absolute;
+export const Ellipse = styled(StyledEllipse)`
+    animation: spin 13s ease-in-out infinite;
+
+    @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(10deg); }
+        50% { transform: translate(-50%, -50%) rotate(30deg); }   
+        100% { transform: translate(-50%, -50%) rotate(10deg); }
+    }
+`
+
+export const Ellipse2 = styled(StyledEllipse)`
+    animation: spin2 10s ease-in-out infinite;
+
+    @keyframes spin2 {
+        0% { transform: translate(-50%, -50%) rotate(-20deg); }
+        50% { transform: translate(-50%, -50%) rotate(10deg); }   
+        100% { transform: translate(-50%, -50%) rotate(-20deg); }
+    }
+`
+
+export const Ellipse3 = styled(StyledEllipse)`
     z-index: 1;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
     animation: spin3 10s ease-in-out infinite;
 
-    @media (max-width: 1200px) {
-        width: 700px;
-        height: 300px;
-    }
-
-    @media (max-width: 768px) {
-        width: 300px;
-        height: 150px;
-    }
-
-    @media (max-width: 380px) {
-        width: 180px;
-        height: 80px;
-    }
-    
     @keyframes spin3 {
-        0% {
-            transform: translate(-50%, -50%) rotate(-40deg);
-        }
-        50% {
-            transform: translate(-50%, -50%) rotate(0deg);
-        }   
-        100% {
-            transform: translate(-50%, -50%) rotate(-40deg);
-        }
+        0% { transform: translate(-50%, -50%) rotate(-40deg); }
+        50% { transform: translate(-50%, -50%) rotate(0deg); }   
+        100% { transform: translate(-50%, -50%) rotate(-40deg); }
     }
 `
 
@@ -293,38 +269,21 @@ export const Cross = styled.div`
         left: 50%;
         transform: translate(-50%, -50%);
     }
-`;
+`
 
-export const Cross2 = styled.div`
-    position: absolute;
-    top: 45%;
-    left: 50%;
+export const Cross2 = styled(Cross)`
     transform: translate(-50%, -50%) rotate(45deg);
-    z-index: 1;
     animation: ${fadeInOut} 7s ease-in-out infinite;
 
-    /* 세로 선 */
     & .vertical {
-        position: absolute;
-        width: 1px;
         height: 150px;
         background-color: #94a8a8;
-        background-image: linear-gradient(#000, #94a8a8, #000);
         top: -75px;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
-    /* 가로 선 */
     & .horizontal {
-        position: absolute;
         width: 150px;
-        height: 1px;
         background-color: #94a8a8;
-        background-image: linear-gradient(#000, #94a8a8, #000);
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 `
 
@@ -341,17 +300,13 @@ export const HalfMoon = styled.div`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 100;
     animation: ${fadeIn} 0.25s ease-in-out;
-`;
+`
 
-export const HalfMoonBorder = styled.div`
-    width: 100px;
-    height: 50px;
+export const HalfMoonBorder = styled(HalfMoon)`
     border: 5px solid rgba(240, 128, 128, 0.7);
     border-radius: 100px 100px 0 0;
     position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
+    background: none;
     z-index: 200;
     animation: ${fadeIn} 0.5s ease-in;
 `
@@ -398,6 +353,10 @@ export const About = styled.div`
     @media (max-width: 1200px) {
         align-items: center;
     }
+
+    @media (max-width: 860px) {
+        padding: 40px 10px;
+    }
 `
 
 export const AboutEllipse = styled(Ellipse)`
@@ -434,13 +393,14 @@ export const AboutEllipse2 = styled(Ellipse)`
     }
 `
 
-export const Introduction = styled.section`
+const ProfileImage = styled.section`
     padding: 50px;
+    position: relative;
     width: 40%;
-
-    h2 {
-        font-size: 2rem;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
         
     p {
         font-size: 1.2rem;
@@ -449,11 +409,11 @@ export const Introduction = styled.section`
 
     @media (max-width: 1200px) {
         width: 100%;
-        padding: 40px 20px;
+        padding: 0;
     }
     
-    @media (max-width: 500px) {
-        padding: 50px 20px 0;
+    @media (max-width: 860px) {
+        padding: 0;
 
         p {
             font-size: 1rem;
@@ -461,18 +421,21 @@ export const Introduction = styled.section`
     }
 `
 
-export const Certificate = styled.section`
+const Introduction = styled.section`
     width: 40%;
     padding: 50px;
-    font-weight: 300;
+    font-weight: 900;
+    opacity: 0;
 
     h2 {
         font-size: 2rem;
+        font-family: 'Freesentation-9Black';
     }
 
     table {
         width: 100%;
         border-collapse: collapse;
+        font-family: 'Freesentation-9Black';
     }
 
     th, td {
@@ -481,7 +444,7 @@ export const Certificate = styled.section`
         font-size: 1.2rem;
 
         @media (max-width: 500px) {
-            font-size: 0.8rem;
+            font-size: 1rem;
         }
     }
 
@@ -503,64 +466,147 @@ export const Certificate = styled.section`
     }
 `;
 
-export const Connect = styled.section`
-    margin-top: 20px;
+export const AnimatedProfileImage = styled(ProfileImage)`
+animation: ${(props) => props.$isVisible ? css`${slideInLeft} 1s forwards` : 'none'};
+`
 
-    h2 {
-        font-size: 20px;
-    }
-
-    a {
-        color: #007bff; /* 링크 색상 */
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: none;
-    }
-`;
-
-
+export const AnimatedIntroduction = styled(Introduction)`
+    animation: ${(props) => props.$isVisible ? css`${fadeIn} 1s forwards` : 'none'};
+    animation-delay: 0.3s;
+`
 
 // Section3
 export const Project = styled.div`
-    max-width: 100vw;
-    background-color: #f9f9f9; /* 배경 색상 설정 */
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-`
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #5ad1ad;
 
-export const ProjectTitle = styled.h2`
-    color: #2e7d32;
-    text-align: center;
-    margin-bottom: 30px;
-`;
-
-export const GridContainer = styled.div`
-    display: grid; 
-    grid-template-columns: auto auto auto;
-    gap: 20px;
-    width: 900px;
-    height: 500px
+    @media (max-width: 860px) {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    }
 `
 
 export const ProjectItemContainer = styled.div`
-    overflow: hidden;
-    border-radius: 20px;
+    background-color: #fff;
     position: relative;
-    border: 2px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+    }
+
+    &:hover .content {
+        opacity: 1;
+    }
+
+        &:hover .button-container {
+        opacity: 1;
+    }
+
+    &:hover img {
+        filter: brightness(0.2);
+    }
+
+    @media (max-width: 1200px) {
+        height: 300px;
+    }
+
+    @media (max-width: 860px) {
+        height: auto;
+    }
 `;
 
-export const ProjectImage = styled.img`
-    width: 100px;
-    height: 100px;
+export const ProjectItemImage = styled.img`
+    margin-right: 20px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+
+    @media (max-width: 860px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 `;
 
+export const ProjectContent = styled.div`
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #fff;
+    
+    ${ProjectItemContainer}:hover & {
+        opacity: 1;
+    }
+    
+    .role {
+        font-size: 0.8rem;
+    }
+
+    .tag {
+        font-size: 0.8rem;
+    }
+
+    p {
+        margin: 5px 0 0;
+    }
+
+    @media (max-width: 860px) {
+        margin-top: 20px;
+        max-width: 400px;
+    }
+`;
+
+export const ProjectTitle = styled.h3`
+    margin: 0;
+`;
+
+export const ProjectLinkContainer = styled.div`
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    opacity: 0;
+    color: #fff;
+
+    ${ProjectItemContainer}:hover & {
+        opacity: 1; /* Hover 시 버튼 보이기 */
+    }
+
+    a {
+        padding: 3px 7px;
+        border: 1px solid #F08080;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.3rem;
+        margin: 0.5rem;
+
+        &:hover {
+            background-color: #F08080;
+            color: #fff;
+        }
+
+        @media (max-width: 860px) {
+            font-size: 1rem;
+        }
+    }
+`;
 
 // Section4
 export const Contact = styled.div`
@@ -568,9 +614,10 @@ export const Contact = styled.div`
     background-color: #fff;
     padding: 40px 30px;
     margin: 0 auto;
+    font-family: 'Freesentation-9Black';
     
     @media (max-width: 600px) {
-        padding: 20px;
+        padding: 10px;
     }
 `
 
@@ -579,13 +626,21 @@ export const ContactTitle = styled.h1`
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
-    padding: 10px 50px;;
+    padding: 10px 50px;
+
+    @media (max-width: 600px) {
+        padding: 2px 10px;
+    }
 `
 
 export const ContactSubtitle = styled.p`
     font-size: 18px;
     margin-bottom: 20px;
     padding: 0 50px;;
+
+    @media (max-width: 600px) {
+        padding: 2px 10px;
+    }
 `
 
 export const LinksContainer = styled.div`
@@ -605,9 +660,11 @@ export const LinksContainer = styled.div`
             color: #F08080;
         }
     }
+
+    @media (max-width: 600px) {
+        padding: 2px 10px;
+    }
 `
-
-
 
 // Footer
 export const Footer = styled.div`
@@ -625,7 +682,7 @@ export const Footer = styled.div`
     p {
         position: absolute;
         font-size: 14px;
-        bottom: 0
+        bottom: 0;
     }
 
     .socialLink {
@@ -656,12 +713,12 @@ export const FooterCross = styled(Cross)`
     & .vertical {
         height: 80px;
         top: -40px;
-        background-image: linear-gradient(#fff, #c7b658, #fff);
+        background-image: linear-gradient(#000, #c7b658, #000);
     }
 
     & .horizontal {
         width: 60px;
-        background-image: linear-gradient(#fff, #c7b658, #fff);
+        background-image: linear-gradient(#000, #c7b658, #000);
     }
 `
 
@@ -669,11 +726,11 @@ export const FooterCross2 = styled(Cross2)`
     & .vertical {
         height: 60px;
         top: -30px;
-        background-image: linear-gradient(#fff, #94a8a8, #fff);
+        background-image: linear-gradient(#000, #94a8a8, #000);
     }
 
     & .horizontal {
         width: 60px;
-        background-image: linear-gradient(#fff, #94a8a8, #fff);
+        background-image: linear-gradient(#000, #94a8a8, #000);
     }
 `
