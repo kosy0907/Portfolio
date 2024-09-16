@@ -57,13 +57,13 @@ function Section1(props, section1Ref) {
                 <HalfMoonBorder />
                 <Title
                     style={{
-                        transform: isScrolled ? 'translateX(-200%)' : 'translateX(0)',
+                        transform: isScrolled ? 'translateX(-300%)' : 'translateX(0)',
                         transition: 'transform 1s ease'
                     }}>KO SEUNG YEON
                 </Title>
                 <SubTitle
                     style={{
-                        transform: isScrolled ? 'translateX(200%)' : 'translateX(0)',
+                        transform: isScrolled ? 'translateX(300%)' : 'translateX(0)',
                         transition: 'transform 1s ease'
                     }}>PORTFOILIO
                 </SubTitle>

@@ -1,8 +1,8 @@
 export const TableMenu = [
     {
         id: 1,
-        name: '명지대학교',
-        date: '2018-02~2022-02'
+        name: '명지대학교 융합소프트웨어학부',
+        date: '2018~2023'
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const TableMenu = [
     },
     {
         id: 5,
-        name: 'TOEIC',
+        name: 'TOEIC 850',
         date: '2023-07'
     },
 ]

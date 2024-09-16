@@ -4,8 +4,10 @@ import Section1 from './component/Section1/Section1';
 import Section2 from './component/Section2/Section2';
 import Section3 from './component/Section3/Section3';
 import Section4 from './component/Section4/Section4';
+import Paint from './component/Paint/Paint';
 import FooterSection from './component/FooterSection/FooterSection';
 import Cursor from './component/CustomCursor/Cursor';
+import { StackSection } from './component/StyledComponent/StyledComponent';
 
 function App() {
   const section1Ref = useRef(null);
@@ -23,14 +25,17 @@ function App() {
   return (
     <>
       <Cursor />
-      <Navbar
-        navbarMenu={navbarMenu}
-      />
-      <Section1 ref={section1Ref} section2Ref={section2Ref} />
-      <Section2 ref={section2Ref} />
-      <Section3 ref={section3Ref} />
-      <Section4 ref={section4Ref} />
-      <FooterSection />
+      <Navbar navbarMenu={navbarMenu} />
+      <StackSection>
+        <Section1 ref={section1Ref} section2Ref={section2Ref} />
+      </StackSection>
+      <StackSection>
+        <Section2 ref={section2Ref} />
+        <Section3 ref={section3Ref} />
+        <Section4 ref={section4Ref} />
+        <Paint />
+        <FooterSection />
+      </StackSection>
     </>
   );
 }

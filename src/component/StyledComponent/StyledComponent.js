@@ -1,4 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
+import night from '../../images/DotPaint/night.gif';
 
 // Animation
 const fadeIn = keyframes`
@@ -43,7 +44,7 @@ export const slideInLeft = keyframes`
         opacity: 1;
         transform: translateX(0);
     }
-`;
+`
 
 // 재사용 컴포넌트
 const StyledEllipse = styled.div`
@@ -71,6 +72,11 @@ const StyledEllipse = styled.div`
         width: 180px;
         height: 80px;
     }
+`
+
+export const StackSection = styled.div`
+    position: sticky;
+    top: 0;
 `
 
 // Navbar
@@ -157,7 +163,6 @@ export const Navigation = styled.nav`
 
 // Section1
 export const Intro = styled.div`
-    font-family: 'Arial', sans-serif;
     color: #94a8a8;
     background-color: #000;
     max-width: 100vw;
@@ -168,6 +173,7 @@ export const Intro = styled.div`
     align-items: center;
     text-align: center;
     overflow: hidden;
+    font-family: 'Freesentation-9Black';
 `
 
 export const MainContent = styled.main`
@@ -332,7 +338,7 @@ export const IntroFooter = styled.footer`
 // Section2
 export const About = styled.div`
     max-width: 100vw;
-    background-color: #b07272;
+    background-color: #bf8888;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -393,55 +399,80 @@ export const AboutEllipse2 = styled(Ellipse)`
     }
 `
 
-const ProfileImage = styled.section`
+const Ability = styled.section`
     padding: 50px;
     position: relative;
     width: 40%;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-        
-    p {
-        font-size: 1.2rem;
-        font-weight: 300;
-    }
+    flex-direction: column;
+
+    background-color: gray;
 
     @media (max-width: 1200px) {
         width: 100%;
-        padding: 0;
+        padding: 20px;
     }
-    
-    @media (max-width: 860px) {
-        padding: 0;
 
-        p {
-            font-size: 1rem;
-        }
+    @media (max-width: 500px) {
+        padding: 5px 20px;
     }
 `
+
+export const FeatureContainer = styled.div`
+    margin: 20px auto;
+    padding: 20px;
+`;
+
+export const FeatureTitle = styled.h3`
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin: 0;
+    padding-bottom: 10px;
+`;
+
+export const FeatureContent = styled.div`
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`
+
+export const FeatureDescription = styled.p`
+    line-height: 1.5;
+    margin: 0;
+`;
+
+export const CheckIcon = styled.span`
+    margin-right: 10px;
+    color: green;
+`;
 
 const Introduction = styled.section`
     width: 40%;
     padding: 50px;
     font-weight: 900;
     opacity: 0;
+    font-size: 1.2rem;
+    font-family: 'Freesentation-9Black';
 
     h2 {
         font-size: 2rem;
-        font-family: 'Freesentation-9Black';
     }
 
     table {
         width: 100%;
         border-collapse: collapse;
-        font-family: 'Freesentation-9Black';
     }
 
     th, td {
         padding: 10px;
         border: none;
-        font-size: 1.2rem;
+        font-size: 1.25rem;
 
         @media (max-width: 500px) {
             font-size: 1rem;
@@ -466,13 +497,46 @@ const Introduction = styled.section`
     }
 `;
 
-export const AnimatedProfileImage = styled(ProfileImage)`
-animation: ${(props) => props.$isVisible ? css`${slideInLeft} 1s forwards` : 'none'};
+export const AnimatedAbility = styled(Ability)`
+    animation: ${(props) => props.$isVisible ? css`${fadeIn} 1s forwards` : 'none'};
+    animation-delay: 0.3s;
+`
+
+export const AboutBg = styled.div`
+    width: 700px;
+    height: 200px;
+    background-color: rgba(158, 213, 246, 0.3);
+    position: absolute;
+    left: -30%;
+    top: 10%;
+    border-radius: 10px;
+`
+
+export const Info = styled.div`
+    margin-bottom: 80px;
+
+    .simpleWords {
+        color: #3d0c0c;
+        margin: 30px 0;
+    }
+
+    p {
+        margin: 5px 0;
+        color: #6e2b2b;
+
+        span {
+            font-weight: 600;
+            color: #000;
+        }
+
+        @media (max-width: 380px) {
+            font-size: 0.9rem;
+        }
+    }
 `
 
 export const AnimatedIntroduction = styled(Introduction)`
-    animation: ${(props) => props.$isVisible ? css`${fadeIn} 1s forwards` : 'none'};
-    animation-delay: 0.3s;
+    animation: ${(props) => props.$isVisible ? css`${slideInLeft} 1s forwards` : 'none'};
 `
 
 // Section3
@@ -482,7 +546,8 @@ export const Project = styled.div`
     grid-template-columns: repeat(4, 1fr);
     box-sizing: border-box;
     overflow: hidden;
-    background-color: #5ad1ad;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0, 0.6);
 
     @media (max-width: 860px) {
         display: flex;
@@ -493,7 +558,7 @@ export const Project = styled.div`
 `
 
 export const ProjectItemContainer = styled.div`
-    background-color: #fff;
+    background-color: none;
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s;
@@ -509,7 +574,7 @@ export const ProjectItemContainer = styled.div`
         opacity: 1;
     }
 
-        &:hover .button-container {
+    &:hover .button-container {
         opacity: 1;
     }
 
@@ -611,13 +676,14 @@ export const ProjectLinkContainer = styled.div`
 // Section4
 export const Contact = styled.div`
     max-width: 100vw;
+    align-items: center;
     background-color: #fff;
-    padding: 40px 30px;
+    padding: 40px 50px;
     margin: 0 auto;
     font-family: 'Freesentation-9Black';
     
-    @media (max-width: 600px) {
-        padding: 10px;
+    @media (max-width: 1200px) {
+        padding: 30px;
     }
 `
 
@@ -628,24 +694,14 @@ export const ContactTitle = styled.h1`
     margin-bottom: 10px;
     padding: 10px 50px;
 
-    @media (max-width: 600px) {
-        padding: 2px 10px;
-    }
-`
-
-export const ContactSubtitle = styled.p`
-    font-size: 18px;
-    margin-bottom: 20px;
-    padding: 0 50px;;
-
-    @media (max-width: 600px) {
-        padding: 2px 10px;
+    @media (max-width: 1200px) {
+        padding: 2px 0;
     }
 `
 
 export const LinksContainer = styled.div`
     margin-top: 20px;
-    padding: 20px 50px;
+    padding: 10px 50px;
 
     a {
         display: block;
@@ -661,8 +717,33 @@ export const LinksContainer = styled.div`
         }
     }
 
-    @media (max-width: 600px) {
-        padding: 2px 10px;
+    @media (max-width: 1200px) {
+        padding: 2px 0;
+    }
+`
+
+// DotPaint
+export const PreFooter = styled.div`
+    position: relative; 
+    width: 100vw;
+    height: 300px;
+    background-image: url(${night});
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+
+    @media (max-width: 860px) {
+        height: 200px;
     }
 `
 
