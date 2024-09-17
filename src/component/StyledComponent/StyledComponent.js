@@ -444,9 +444,10 @@ export const FeatureTitle = styled.h3`
     margin: 0;
     padding-bottom: 10px;
     color: #F08080;
+    font-family: 'Freesentation-9Black';
 
     @media (max-width: 500px) {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 `;
 

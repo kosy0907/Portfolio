@@ -15,7 +15,7 @@ export const Features = [
     },
     {
         id: 3,
-        title: '지속적인 학습 및 적응력',
+        title: '지속적인 학습과 빠른 적응력',
         description: '빠르게 변화하는 기술과 환경에 신속하게 적응하고, 새로운 도구와 기법을 지속적으로 학습하는 자세를 가지고 있습니다.',
         icon: faBookBookmark
     }
