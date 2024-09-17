@@ -3,6 +3,8 @@
 - Home
 - About
 - Project
+- Contact
+- Footer
 
 ## 📑 역할
 - Design
