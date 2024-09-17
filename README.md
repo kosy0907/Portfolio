@@ -36,7 +36,6 @@
     - **useRef**: mainCursorRef와 subCursorRef 초기화
     - **useEffect**: mouseMove event가 발생할 때마다 mainCursorRef와 subCursorRef의 위치를 변경합니다.
     - **onMouseMove**: 이벤트 객체를 받아서 Cursor의 위치를 파악하고, mainCursorRef와 subCursorRef의 'transform' 속성을 변경합니다.   
-    <br>
     ```
     function Cursor() {
         const mainCursorRef = useRef(null);
@@ -65,4 +64,3 @@
         );
     }
     ```
-    <br>

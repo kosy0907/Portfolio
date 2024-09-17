@@ -69,7 +69,7 @@ function Section2(props, section2Ref) {
             </AnimatedIntroduction>
             <AnimatedAbility ref={introRef} $isVisible={isVisible}>
                 {Features.map((feature, index) => (
-                    <FeatureContainer>
+                    <FeatureContainer key={index}>
                         <CheckIconContainer>
                             <CheckIcon>
                                 <FontAwesomeIcon icon={feature.icon} className='icon' style={{ width: '30px', height: '30px' }} />
