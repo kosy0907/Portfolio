@@ -20,7 +20,7 @@ function Section3(props, section3Ref) {
                         <p className='role'>
                             Role: {item.tag[0].role.join(', ')}
                         </p>
-                        {item.tag[3] && <p className='tag'>#{item.tag[3].fcn.join(' #')}</p>}
+                        {item.tag[3] && <p className='tag'>#{item.tag[3].fcn.join(' #')} #{item.tag.find(tag => tag.pj_category)?.pj_category}</p>}
                     </ProjectContent>
 
                     <ProjectLinkContainer>
