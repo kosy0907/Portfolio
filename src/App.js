@@ -16,10 +16,10 @@ function App() {
   const section4Ref = useRef(null);
 
   const navbarMenu = [
-    { name: 'Home', link: '#home', ref: section1Ref },
-    { name: 'About', link: '#about', ref: section2Ref },
-    { name: 'Project', link: '#project', ref: section3Ref },
-    { name: 'Contact', link: '#contact', ref: section4Ref }
+    { name: 'Home', ref: section1Ref },
+    { name: 'About', ref: section2Ref },
+    { name: 'Project', ref: section3Ref },
+    { name: 'Contact', ref: section4Ref }
   ];
 
   return (

@@ -5,8 +5,13 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar({ navbarMenu }) {
 
-    const scrollToSection = (ref) => {
-        ref.current.scrollIntoView({ behavior: 'smooth' });
+    const scrollToSection = (menu) => {
+        if (menu.name === 'Home') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            menu.ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+        setMenuOpen(false);
     };
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -24,10 +29,11 @@ function Navbar({ navbarMenu }) {
             <Navigation className={menuOpen ? 'active' : ''}>
                 <ul>
                     {navbarMenu.map((menu, id) => (
-                        <li key={id} onClick={() => scrollToSection(menu.ref)}>
-                            <a href={menu.link}>
-                                <span>{menu.name}</span>
-                            </a>
+                        <li key={id} onClick={(e) => {
+                            e.preventDefault();
+                            scrollToSection(menu);
+                        }}>
+                            <span>{menu.name}</span>
                         </li>
                     ))}
                 </ul>
