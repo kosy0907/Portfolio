@@ -21,7 +21,10 @@ function FooterSection() {
             </FooterCross2>
             <HalfMoon style={{ width: '50px', height: '25px' }} />
             <HalfMoonBorder style={{ width: '50px', height: '25px' }} />
-            <p><FontAwesomeIcon icon={faCopyright} className='icon' /> SeungYeon Ko 2024. All Rights Reserved</p>
+            <p>
+                <FontAwesomeIcon icon={faCopyright} className='icon' />
+                SeungYeon Ko 2024. All Rights Reserved
+            </p>
             <div className='socialLink'>
                 <a href={gitUrl} target='_blank' className='snsIcon' rel="noreferrer"><FontAwesomeIcon icon={faGithub} className='icon fa-xl' /></a>
                 <a href={blogUrl} target='_blank' className='snsIcon' rel="noreferrer"><FontAwesomeIcon icon={faBook} className='icon fa-xl' /></a>
