@@ -8,10 +8,12 @@ import {
     FeatureDescription,
     CheckIcon,
     AnimatedAbility, AnimatedIntroduction,
-    Info
+    Info,
+    CheckIconContainer
 } from '../StyledComponent/StyledComponent';
 import { TableMenu } from './TableMenu';
 import { Features } from './Features';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Section2(props, section2Ref) {
     const [isVisible, setIsVisible] = useState(false);
@@ -67,17 +69,19 @@ function Section2(props, section2Ref) {
             </AnimatedIntroduction>
             <AnimatedAbility ref={introRef} $isVisible={isVisible}>
                 {Features.map((feature, index) => (
-                    <>
-                        <FeatureContainer>
-                            <CheckIcon>✔️</CheckIcon>
-                            <FeatureContent>
-                                <FeatureTitle>
-                                    {feature.title}
-                                </FeatureTitle>
-                                <FeatureDescription>{feature.description}</FeatureDescription>
-                            </FeatureContent>
-                        </FeatureContainer>
-                    </>
+                    <FeatureContainer>
+                        <CheckIconContainer>
+                            <CheckIcon>
+                                <FontAwesomeIcon icon={feature.icon} className='icon' style={{ width: '30px', height: '30px' }} />
+                            </CheckIcon>
+                        </CheckIconContainer>
+                        <FeatureContent>
+                            <FeatureTitle>
+                                {feature.title}
+                            </FeatureTitle>
+                            <FeatureDescription>{feature.description}</FeatureDescription>
+                        </FeatureContent>
+                    </FeatureContainer>
                 ))}
             </AnimatedAbility>
         </About>

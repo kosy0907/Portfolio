@@ -58,12 +58,12 @@ const StyledEllipse = styled.div`
     transform: translate(-50%, -50%);
     animation: ${({ animation }) => animation} 10s ease-in-out infinite;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
         width: 700px;
         height: 300px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 860px) {
         width: 300px;
         height: 150px;
     }
@@ -333,18 +333,19 @@ export const IntroFooter = styled.footer`
     padding-bottom: 30px;
     color: rgb(252, 220, 188, 0.3);
     font-size: 0.75rem;
-`;
+`
 
 // Section2
 export const About = styled.div`
     max-width: 100vw;
-    background-color: #bf8888;
+    background-color: #fafafa;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 40px 30px;
+    padding: 40px 60px;
     position: relative;
     overflow: hidden;
+    color: #333232;
 
     a {
         svg {
@@ -356,7 +357,7 @@ export const About = styled.div`
             }
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
         align-items: center;
     }
 
@@ -372,8 +373,9 @@ export const AboutEllipse = styled(Ellipse)`
     left: 10%;
     animation: none;
     transform: rotate(35deg);
+    border-color: rgba(235, 152, 152, 0.5);
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
         width: 700px;
         height: 350px;
         left: 50%;
@@ -389,8 +391,9 @@ export const AboutEllipse2 = styled(Ellipse)`
     left: 60%;
     animation: none;
     transform: rotate(35deg);
+    border-color: rgba(235, 152, 152, 0.5);
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
         width: 700px;
         height: 350px;
         left: 50%;
@@ -400,19 +403,16 @@ export const AboutEllipse2 = styled(Ellipse)`
 `
 
 const Ability = styled.section`
-    padding: 50px;
+    padding: 20px 30px;
     position: relative;
     width: 40%;
-    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     flex-direction: column;
 
-    background-color: gray;
-
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
         width: 100%;
         padding: 20px;
     }
@@ -423,38 +423,88 @@ const Ability = styled.section`
 `
 
 export const FeatureContainer = styled.div`
-    margin: 20px auto;
     padding: 20px;
+    margin-right: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 1400px) {
+        margin: 0;
+    }
+
+    @media (max-width: 860px) {
+        padding: 10px;
+    }
 `;
 
 export const FeatureTitle = styled.h3`
-    display: flex;
-    align-items: center;
     font-size: 1.5em;
     margin: 0;
     padding-bottom: 10px;
+    color: #F08080;
+
+    @media (max-width: 500px) {
+        font-size: 1rem;
+    }
 `;
 
 export const FeatureContent = styled.div`
-    border: 2px solid #000;
+    flex: 1;
+    border: 2px solid #757575;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    @media (max-width: 860px) {
+        width: 100%;
+    }
 `
 
 export const FeatureDescription = styled.p`
     line-height: 1.5;
     margin: 0;
+    font-family: 'Freesentation-9Black';
+    font-size: 1.2rem;
+
+    @media (max-width: 500px) {
+        font-size: 1rem;
+    }
+`;
+
+export const CheckIconContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #F08080;
+    margin-right: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 860px) {
+        display: none;
+    }
 `;
 
 export const CheckIcon = styled.span`
-    margin-right: 10px;
-    color: green;
+    color: #fff;
+    font-size: 1.5em;
+    width: 30px;
+    height: 30px;
+
+    @media (max-width: 860px) {
+        font-size: 1em;
+    }
 `;
 
 const Introduction = styled.section`
     width: 40%;
-    padding: 50px;
+    padding: 20px 30px;
     font-weight: 900;
     opacity: 0;
     font-size: 1.2rem;
@@ -462,6 +512,7 @@ const Introduction = styled.section`
 
     h2 {
         font-size: 2rem;
+        color: #F08080;
     }
 
     table {
@@ -487,7 +538,7 @@ const Introduction = styled.section`
         padding: 10px;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
         width: 100%;
         padding: 20px;
     }
@@ -502,35 +553,23 @@ export const AnimatedAbility = styled(Ability)`
     animation-delay: 0.3s;
 `
 
-export const AboutBg = styled.div`
-    width: 700px;
-    height: 200px;
-    background-color: rgba(158, 213, 246, 0.3);
-    position: absolute;
-    left: -30%;
-    top: 10%;
-    border-radius: 10px;
-`
-
 export const Info = styled.div`
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 
     .simpleWords {
-        color: #3d0c0c;
         margin: 30px 0;
     }
 
     p {
         margin: 5px 0;
-        color: #6e2b2b;
 
         span {
             font-weight: 600;
             color: #000;
         }
 
-        @media (max-width: 380px) {
-            font-size: 0.9rem;
+        @media (max-width: 500px) {
+            font-size: 1rem;
         }
     }
 `
@@ -726,10 +765,7 @@ export const LinksContainer = styled.div`
 export const PreFooter = styled.div`
     position: relative; 
     width: 100vw;
-    height: 300px;
-    background-image: url(${night});
-    background-size: cover;
-    background-position: center;
+    height: 500px;
 
     &::before {
         content: '';
@@ -744,6 +780,9 @@ export const PreFooter = styled.div`
 
     @media (max-width: 860px) {
         height: 200px;
+        background-size: cover;
+        background-position: center;
+        background-image: url(${night});
     }
 `
 
