@@ -25,7 +25,7 @@ function Section3(props, section3Ref) {
 
                     <ProjectLinkContainer>
                         {item.tag[1].type.includes('Test Case') ? (
-                            <a href={`${process.env.PUBLIC_URL}/TCFile/${item.fileName}.pdf`} download={item.fileName} rel='noreferrer'>Download</a>
+                            <a href={item.link} target='_blank' rel='noreferrer'>View</a>
                         ) : item.link ? (
                             <a href={item.link} target='_blank' rel='noreferrer'>Link</a>
                         ) : null}

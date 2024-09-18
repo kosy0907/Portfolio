@@ -115,7 +115,7 @@ export const ProjectItem = [
         ],
         img: 'olook_tc',
         fileName: 'olook_tc.pdf',
-        link: '/TCFile/olook_tc.pdf',
+        link: 'https://kosy0907.github.io/Portfolio/TCFile/olook_tc.pdf',
         code: '',
     },
     // {
@@ -137,8 +137,8 @@ export const ProjectItem = [
     //             fcn: ['Excel']
     //         }
     //     ],
-    //     img: 'olook_tc',
-    //     link: 'blank',
+    //     img: 'portfolio_tc',
+    //     link: 'https://kosy0907.github.io/Portfolio/TCFile/portfolio_tc.pdf',
     //     code: '',
     // },
     // {
@@ -160,8 +160,8 @@ export const ProjectItem = [
     //             fcn: ['Excel']
     //         }
     //     ],
-    //     img: 'olook_tc',
-    //     link: 'blank',
+    //     img: 'evmap_tc',
+    //     link: 'https://kosy0907.github.io/Portfolio/TCFile/evmap_tc.pdf',
     //     code: '',
     // },
 ]
