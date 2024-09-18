@@ -65,7 +65,7 @@ function Section1(props, section1Ref) {
                     style={{
                         transform: isScrolled ? 'translateX(300%)' : 'translateX(0)',
                         transition: 'transform 1s ease'
-                    }}>PORTFOILIO
+                    }}>PORTFOLIO
                 </SubTitle>
                 <Ellipse />
                 <Ellipse2 />
