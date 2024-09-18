@@ -128,14 +128,8 @@ export const Navigation = styled.nav`
         padding: 0;
 
         li {
-            a {
-                color: #fff;
-                text-decoration: none;
-                transition: color 0.3s;
-
-                &:hover {
-                    color: #F08080;
-                }
+        &:hover {
+            color: #F08080;
             }
         }
     }
