@@ -2,7 +2,7 @@ export const ProjectItem = [
     {
         id: 2,
         title: 'Portfolio',
-        period: '2023-03-31 ~ 2023-04-10',
+        period: '2024.09.13 ~ 2024.9.17',
         description: '프로젝트와 소개를 넣은 개인 포트폴리오 웹 사이트 입니다.',
         tag: [
             {
@@ -15,7 +15,7 @@ export const ProjectItem = [
                 pj_category: 'Personal'
             },
             {
-                fcn: ['반응형', 'fade-in animation', 'React.js']
+                fcn: ['반응형', 'animation', 'React.js']
             }
         ],
         img: 'portfolio_mockup',
@@ -94,30 +94,30 @@ export const ProjectItem = [
         code: 'https://github.com/kosy0907/Uckeck-hour',
         color: '#02422'
     },
-    // {
-    //     id: 6,
-    //     title: 'OLook TestCase',
-    //     period: '2021-03 ~ 2021-06',
-    //     description: '팀 프로젝트로 진행한 패션 아이템 추천 사이트의 테스트 케이스입니다.',
-    //     tag: [
-    //         {
-    //             role: ['All']
-    //         },
-    //         {
-    //             type: ['Test Case', 'All']
-    //         },
-    //         {
-    //             pj_category: 'Team'
-    //         },
-    //         {
-    //             fcn: ['Excel']
-    //         }
-    //     ],
-    //     img: 'olook_tc',
-    //     fileName: 'olook_tc.xlsx',
-    //     link: '/TCFile/olook_tc.xlsx',
-    //     code: '',
-    // },
+    {
+        id: 6,
+        title: 'OLook TestCase',
+        period: '2021-03 ~ 2021-06',
+        description: '팀 프로젝트로 진행한 패션 아이템 추천 사이트의 테스트 케이스입니다.',
+        tag: [
+            {
+                role: ['All']
+            },
+            {
+                type: ['Test Case', 'All']
+            },
+            {
+                pj_category: 'Team'
+            },
+            {
+                fcn: ['Excel']
+            }
+        ],
+        img: 'olook_tc',
+        fileName: 'olook_tc.pdf',
+        link: '/TCFile/olook_tc.pdf',
+        code: '',
+    },
     // {
     //     id: 7,
     //     title: 'Portfolio TestCase',
