@@ -1,5 +1,6 @@
 # 포트폴리오 웹사이트
 링크: [Portfolio](https://kosy0907.github.io/Portfolio/)
+- Navbar
 - Home
 - About
 - Project
@@ -26,6 +27,8 @@
 - github pages
 
 ## ✔ 기능
+✅ Sticky Navbar
+
 ✅ Custom Cursor
 
 ✅ Responsive web

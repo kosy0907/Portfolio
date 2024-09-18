@@ -183,7 +183,7 @@ export const MainContent = styled.main`
     justify-content: center;
     align-items: center;
     flex: 1;
-`;
+`
 
 export const Title = styled.h1`
     font-size: 6rem;
@@ -437,7 +437,7 @@ export const FeatureContainer = styled.div`
     @media (max-width: 860px) {
         padding: 10px;
     }
-`;
+`
 
 export const FeatureTitle = styled.h3`
     font-size: 1.5em;
@@ -449,7 +449,7 @@ export const FeatureTitle = styled.h3`
     @media (max-width: 500px) {
         font-size: 1.25rem;
     }
-`;
+`
 
 export const FeatureContent = styled.div`
     flex: 1;
@@ -473,7 +473,7 @@ export const FeatureDescription = styled.p`
     @media (max-width: 500px) {
         font-size: 1rem;
     }
-`;
+`
 
 export const CheckIconContainer = styled.div`
     display: flex;
@@ -490,7 +490,7 @@ export const CheckIconContainer = styled.div`
     @media (max-width: 860px) {
         display: none;
     }
-`;
+`
 
 export const CheckIcon = styled.span`
     color: #fff;
@@ -501,7 +501,7 @@ export const CheckIcon = styled.span`
     @media (max-width: 860px) {
         font-size: 1em;
     }
-`;
+`
 
 const Introduction = styled.section`
     width: 40%;
@@ -547,7 +547,7 @@ const Introduction = styled.section`
     @media (max-width: 500px) {
         padding: 5px 20px;
     }
-`;
+`
 
 export const AnimatedAbility = styled(Ability)`
     animation: ${(props) => props.$isVisible ? css`${fadeIn} 1s forwards` : 'none'};
@@ -629,7 +629,7 @@ export const ProjectItemContainer = styled.div`
     @media (max-width: 860px) {
         height: auto;
     }
-`;
+`
 
 export const ProjectItemImage = styled.img`
     margin-right: 20px;
@@ -641,7 +641,7 @@ export const ProjectItemImage = styled.img`
         margin-right: 0;
         margin-bottom: 10px;
     }
-`;
+`
 
 export const ProjectContent = styled.div`
     position: absolute;
@@ -673,11 +673,11 @@ export const ProjectContent = styled.div`
         margin-top: 20px;
         max-width: 400px;
     }
-`;
+`
 
 export const ProjectTitle = styled.h3`
     margin: 0;
-`;
+`
 
 export const ProjectLinkContainer = styled.div`
     position: absolute;
@@ -689,7 +689,7 @@ export const ProjectLinkContainer = styled.div`
     color: #fff;
 
     ${ProjectItemContainer}:hover & {
-        opacity: 1; /* Hover 시 버튼 보이기 */
+        opacity: 1;
     }
 
     a {
@@ -711,7 +711,7 @@ export const ProjectLinkContainer = styled.div`
             font-size: 1rem;
         }
     }
-`;
+`
 
 // Section4
 export const Contact = styled.div`
@@ -814,11 +814,11 @@ export const Footer = styled.div`
             margin: 10px 20px;
 
             svg {
-                color: #fff; /* 기본 색상 */
+                color: #fff;
             }
 
             &:hover svg {
-                color: #F08080; /* hover 시 색상 변경 */
+                color: #F08080;
             }
         }
     }
