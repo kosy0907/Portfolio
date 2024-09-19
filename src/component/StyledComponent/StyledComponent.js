@@ -244,7 +244,6 @@ export const Cross = styled.div`
     position: absolute;
     top: 45%;
     left: 50%;
-    
     z-index: 1;
     animation: ${fadeInOut} 5s ease-in-out infinite;
 
