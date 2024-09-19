@@ -755,7 +755,7 @@ export const LinksContainer = styled.div`
     }
 `
 
-// DotPaint
+// PreFooter(Only in mobile)
 export const PreFooter = styled.div`
     position: relative; 
     width: 100vw;
