@@ -30,6 +30,8 @@
 
 ✅ Responsive web
 
+✅ Animation
+
 ## What I learned
 ### useRef를 사용한 Custom Cursor
     - 커서를 커스텀화하여 구현한 코드입니다. 
