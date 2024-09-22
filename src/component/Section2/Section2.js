@@ -18,7 +18,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Section2(props, section2Ref) {
     const [isVisible, setIsVisible] = useState(false);
     const introRef = useRef(null);
-    const certRef = useRef(null);
+    const abilityRef = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -31,14 +31,14 @@ function Section2(props, section2Ref) {
         });
 
         const currentIntroRef = introRef.current;
-        const currentCertRef = certRef.current;
+        const currentAbilityRef = abilityRef.current;
 
         if (currentIntroRef) observer.observe(currentIntroRef);
-        if (currentCertRef) observer.observe(currentCertRef);
+        if (currentAbilityRef) observer.observe(currentAbilityRef);
 
         return () => {
             if (currentIntroRef) observer.unobserve(currentIntroRef);
-            if (currentCertRef) observer.unobserve(currentCertRef);
+            if (currentAbilityRef) observer.unobserve(currentAbilityRef);
         };
     }, []);
 
@@ -46,7 +46,7 @@ function Section2(props, section2Ref) {
         <About ref={section2Ref}>
             <AboutEllipse />
             <AboutEllipse2 />
-            <AnimatedIntroduction ref={certRef} $isVisible={isVisible}>
+            <AnimatedIntroduction ref={introRef} $isVisible={isVisible}>
                 <h2>Hello, I'm Ko Seung Yeon!</h2>
                 <Info>
                     <p className='simpleWords'>
@@ -67,7 +67,7 @@ function Section2(props, section2Ref) {
                     </tbody>
                 </table>
             </AnimatedIntroduction>
-            <AnimatedAbility ref={introRef} $isVisible={isVisible}>
+            <AnimatedAbility ref={abilityRef} $isVisible={isVisible}>
                 {Features.map((feature, index) => (
                     <FeatureContainer key={index}>
                         <CheckIconContainer>
