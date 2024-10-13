@@ -17,6 +17,7 @@ function Section3(props, section3Ref) {
                     <ProjectContent className='content'>
                         <ProjectTitle>{item.title}</ProjectTitle>
                         <p>{item.description}</p>
+                        <p>{item.period}</p>
                         <p className='role'>
                             Role: {item.tag[0].role.join(', ')}
                         </p>
