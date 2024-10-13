@@ -26,7 +26,7 @@ export const ProjectItem = [
     {
         id: 3,
         title: 'EV-map',
-        period: '2023-01-21 ~ 2023-01-30',
+        period: '2022-01-21 ~ 2022-01-30',
         description: '서울시 내의 지하철역 근처 교통약자용 엘리베이터 위치를 지도에 표시해주는 웹 사이트입니다.',
         tag: [
             {
