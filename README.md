@@ -10,6 +10,7 @@
 ## 📑 역할
 - Design
 - FrontEnd
+- Test
 - Deploy
 
 ## 💬 프로젝트 소개
