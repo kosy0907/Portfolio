@@ -6,7 +6,7 @@ export const ProjectItem = [
         description: '프로젝트와 소개를 넣은 개인 포트폴리오 웹 사이트 입니다.',
         tag: [
             {
-                role: ['Design', 'FrontEnd', 'Deploy']
+                role: ['Design', 'FrontEnd', 'Test', 'Deploy']
             },
             {
                 type: ['Web', 'All']
@@ -30,7 +30,7 @@ export const ProjectItem = [
         description: '서울시 내의 지하철역 근처 교통약자용 엘리베이터 위치를 지도에 표시해주는 웹 사이트입니다.',
         tag: [
             {
-                role: ['Design', 'FrontEnd', 'BackEnd', 'Deploy']
+                role: ['Design', 'FrontEnd', 'BackEnd', 'Test', 'Deploy']
             },
             {
                 type: ['Web', 'All']
@@ -141,29 +141,5 @@ export const ProjectItem = [
         fileName: 'portfolio_tc.pdf',
         link: 'https://kosy0907.github.io/Portfolio/TCFile/portfolio_tc.pdf',
         code: '',
-    },
-    // {
-    //     id: 8,
-    //     title: 'EV-map TestCase',
-    //     period: '2023-03-31 ~ 2023-04-10',
-    //     description: 'EV-map 사이트의 테스트 케이스입니다.',
-    //     tag: [
-    //         {
-    //             role: ['All']
-    //         },
-    //         {
-    //             type: ['Test Case', 'All']
-    //         },
-    //         {
-    //             pj_category: 'Personal'
-    //         },
-    //         {
-    //             fcn: ['Excel']
-    //         }
-    //     ],
-    //     img: 'evmap_tc',
-    //     fileName: 'evmap_tc.pdf',
-    //     link: 'https://kosy0907.github.io/Portfolio/TCFile/evmap_tc.pdf',
-    //     code: '',
-    // },
+    }
 ]
