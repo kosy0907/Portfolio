@@ -120,6 +120,30 @@ export const ProjectItem = [
     },
     {
         id: 7,
+        title: 'EV-map TestCase',
+        period: '2023-03-31 ~ 2023-04-10',
+        description: 'EV-map 사이트의 테스트 케이스입니다.',
+        tag: [
+            {
+                role: ['All']
+            },
+            {
+                type: ['Test Case', 'All']
+            },
+            {
+                pj_category: 'Personal'
+            },
+            {
+                fcn: ['Excel']
+            }
+        ],
+        img: 'evmap_tc',
+        fileName: 'evmap_tc.pdf',
+        link: 'https://kosy0907.github.io/Portfolio/TCFile/evmap_tc.pdf',
+        code: '',
+    },
+    {
+        id: 8,
         title: 'Portfolio TestCase',
         period: '2024-09-13 ~ 2024-09-17',
         description: '개인 포트폴리오 웹 사이트의 테스트 케이스입니다.',
