@@ -2,7 +2,7 @@ export const ProjectItem = [
     {
         id: 2,
         title: 'Portfolio',
-        period: '2024.09.13 ~ 2024.9.17',
+        period: '2024-09-13 ~ 2024-9-17',
         description: '프로젝트와 소개를 넣은 개인 포트폴리오 웹 사이트 입니다.',
         tag: [
             {
