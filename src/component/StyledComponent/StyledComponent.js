@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
-import night from '../../images/DotPaint/night.gif';
+import night from '../../images/PixelArt/night.gif';
 
 // Animation
 const fadeIn = keyframes`

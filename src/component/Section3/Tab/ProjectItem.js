@@ -98,7 +98,7 @@ export const ProjectItem = [
         id: 6,
         title: 'OLook TestCase',
         period: '2021-03 ~ 2021-06',
-        description: '팀 프로젝트로 진행한 패션 아이템 추천 사이트의 테스트 케이스입니다.',
+        description: '팀 프로젝트로 진행한 패션 아이템 추천 사이트, OLook의 테스트 케이스입니다.',
         tag: [
             {
                 role: ['All']
@@ -121,7 +121,7 @@ export const ProjectItem = [
     {
         id: 7,
         title: 'EV-map TestCase',
-        period: '2023-03-31 ~ 2023-04-10',
+        period: '2022-01-27 ~ 2022-01-29',
         description: 'EV-map 사이트의 테스트 케이스입니다.',
         tag: [
             {
