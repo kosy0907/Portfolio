@@ -77,16 +77,16 @@ export const ProjectItem = [
         description: '주차장에서 플레이어의 자동차를 탈출시키는 게임, "RushHour"을 유니티로 구현했습니다. U check는 출석 체크 어플로, 지각 체크 전, 플레이어가 제 시간에 도착하는 것을 목표로 합니다.',
         tag: [
             {
-                role: ['Design']
+                role: ['Intro Video', 'Design', 'Test']
             },
             {
-                type: ['Design', 'All']
+                type: ['Design', 'Test Case', 'All']
             },
             {
                 pj_category: 'Team'
             },
             {
-                fcn: ['Unity']
+                fcn: ['Aesprite', 'Unity', 'Excel']
             }
         ],
         img: 'ucheckhour_mockup',
@@ -144,6 +144,30 @@ export const ProjectItem = [
     },
     {
         id: 7,
+        title: 'Ucheck-Hour TestCase',
+        period: '2022-09 ~ 2022-12',
+        description: 'Ucheck-Hour의 테스트 케이스입니다.',
+        tag: [
+            {
+                role: ['Intro Video', 'Design', 'Test']
+            },
+            {
+                type: ['Test Case', 'All']
+            },
+            {
+                pj_category: 'Team'
+            },
+            {
+                fcn: ['Excel']
+            }
+        ],
+        img: 'ucheckhour_tc',
+        fileName: 'ucheckhour_tc.pdf',
+        link: 'https://kosy0907.github.io/Portfolio/TCFile/ucheckhour_tc.pdf',
+        code: '',
+    },
+    {
+        id: 8,
         title: 'Portfolio TestCase',
         period: '2024-09-13 ~ 2024-09-17',
         description: '개인 포트폴리오 웹 사이트의 테스트 케이스입니다.',
