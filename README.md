@@ -1,10 +1,11 @@
 # 포트폴리오 웹사이트
 링크: [Portfolio](https://kosy0907.github.io/Portfolio/)
 - Navbar
-- Home
-- About
-- Project
-- Contact
+- 메인
+- 소개
+- 경력
+- 경험
+- 포트폴리오
 - Footer
 
 ## 📑 역할
@@ -25,45 +26,8 @@
 - github pages
 
 ## ✔ 기능
-✅ Sticky Navbar
+✅ 커스텀 커서
 
-✅ Custom Cursor
+✅ 반응형 웹
 
-✅ Responsive web
-
-✅ Animation
-
-## What I learned
-### useRef를 사용한 Custom Cursor
-    - 커서를 커스텀화하여 구현한 코드입니다. 
-    - **useRef**: mainCursorRef와 subCursorRef 초기화
-    - **useEffect**: mouseMove event가 발생할 때마다 mainCursorRef와 subCursorRef의 위치를 변경합니다.
-    - **onMouseMove**: 이벤트 객체를 받아서 Cursor의 위치를 파악하고, mainCursorRef와 subCursorRef의 'transform' 속성을 변경합니다.   
-    ```
-    function Cursor() {
-        const mainCursorRef = useRef(null);
-        const subCursorRef = useRef(null);
-
-        useEffect(() => {
-            const onMouseMove = (e) => {
-                const { clientX, clientY } = e
-
-                mainCursorRef.current.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
-                subCursorRef.current.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
-                subCursorRef.current.style.transition = `all 0.15s`;
-            }
-            document.addEventListener('mousemove', onMouseMove);
-
-            return () => {
-                document.removeEventListener('mousemove', onMouseMove);
-            }
-        }, [])
-
-        return (
-            <div>
-                <div className='mainCursor' ref={mainCursorRef} />
-                <div className='subCursor' ref={subCursorRef} />
-            </div>
-        );
-    }
-    ```
+✅ 애니메이션
